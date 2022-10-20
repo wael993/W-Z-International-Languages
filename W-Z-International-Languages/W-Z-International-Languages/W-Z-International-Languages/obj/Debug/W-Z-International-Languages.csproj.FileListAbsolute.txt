@@ -1,0 +1,15 @@
+F:\Arbeit\projekt\Zweit\W-Z-International-Languages\W-Z-International-Languages\W-Z-International-Languages\bin\Debug\W-Z-International-Languages.exe.config
+F:\Arbeit\projekt\Zweit\W-Z-International-Languages\W-Z-International-Languages\W-Z-International-Languages\bin\Debug\W-Z-International-Languages.exe
+F:\Arbeit\projekt\Zweit\W-Z-International-Languages\W-Z-International-Languages\W-Z-International-Languages\bin\Debug\W-Z-International-Languages.pdb
+F:\Arbeit\projekt\Zweit\W-Z-International-Languages\W-Z-International-Languages\W-Z-International-Languages\obj\Debug\W-Z-International-Languages.csprojAssemblyReference.cache
+F:\Arbeit\projekt\Zweit\W-Z-International-Languages\W-Z-International-Languages\W-Z-International-Languages\obj\Debug\MainWindow.g.cs
+F:\Arbeit\projekt\Zweit\W-Z-International-Languages\W-Z-International-Languages\W-Z-International-Languages\obj\Debug\App.g.cs
+F:\Arbeit\projekt\Zweit\W-Z-International-Languages\W-Z-International-Languages\W-Z-International-Languages\obj\Debug\W-Z-International-Languages_MarkupCompile.cache
+F:\Arbeit\projekt\Zweit\W-Z-International-Languages\W-Z-International-Languages\W-Z-International-Languages\obj\Debug\W-Z-International-Languages_MarkupCompile.lref
+F:\Arbeit\projekt\Zweit\W-Z-International-Languages\W-Z-International-Languages\W-Z-International-Languages\obj\Debug\MainWindow.baml
+F:\Arbeit\projekt\Zweit\W-Z-International-Languages\W-Z-International-Languages\W-Z-International-Languages\obj\Debug\W-Z-International-Languages.g.resources
+F:\Arbeit\projekt\Zweit\W-Z-International-Languages\W-Z-International-Languages\W-Z-International-Languages\obj\Debug\W_Z_International_Languages.Properties.Resources.resources
+F:\Arbeit\projekt\Zweit\W-Z-International-Languages\W-Z-International-Languages\W-Z-International-Languages\obj\Debug\W-Z-International-Languages.csproj.GenerateResource.cache
+F:\Arbeit\projekt\Zweit\W-Z-International-Languages\W-Z-International-Languages\W-Z-International-Languages\obj\Debug\W-Z-International-Languages.csproj.CoreCompileInputs.cache
+F:\Arbeit\projekt\Zweit\W-Z-International-Languages\W-Z-International-Languages\W-Z-International-Languages\obj\Debug\W-Z-International-Languages.exe
+F:\Arbeit\projekt\Zweit\W-Z-International-Languages\W-Z-International-Languages\W-Z-International-Languages\obj\Debug\W-Z-International-Languages.pdb
