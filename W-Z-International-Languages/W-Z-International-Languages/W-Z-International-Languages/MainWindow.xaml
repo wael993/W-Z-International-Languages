@@ -5,10 +5,44 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:W_Z_International_Languages"
         mc:Ignorable="d"
-     Title="W_Z International Languages" Height="1000" Width="1600" FontSize="20" >
+     Title="W_Z International Languages" Height="450" Width="800" FontSize="20" >
     <Grid>
-        
-        
-        
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="216*"/>
+            <ColumnDefinition Width="147*"/>
+            <ColumnDefinition Width="283*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="0" FontSize="22" FontFamily="Century" FontWeight="Bold" Foreground="#3BB9FF" Text="W_Z International Languages" Margin="5,19,93,12" Grid.ColumnSpan="2"/>
+        <TextBlock FontSize="22" FontFamily="Century" FontWeight="Bold" Foreground="#3BB9FF" Text="LOGIN" Margin="43,16,338,27" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" Grid.Row="1" Grid.Column="1"/>
+        <Border Background="#3BB9FF" CornerRadius="200" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Margin="-11,0,-10,-76" Width="817" Grid.Row="4" Grid.ColumnSpan="3" Height="214" VerticalAlignment="Bottom" Grid.RowSpan="2"/>
+        <Label Grid.Row="1" Grid.Column="0" FontSize="20" FontWeight="Bold" Foreground="White" FontFamily="Book Antiqua" Content="Welcommen"  Margin="48,24,80,0" />
+        <Label Grid.Row="2" Grid.Column="0" FontSize="24" FontWeight="Bold" Foreground="White" FontFamily="Book Antiqua" Content="HBSFWI"  Margin="48,24,99,0" />
+        <Label Grid.Row="3" Grid.Column="0" FontSize="20" FontWeight="Bold" Foreground="White" FontFamily="Book Antiqua" Content="Online Bibleothek" Margin="10,24,80,0" />
+
+        <Label Content="USERNAME" Grid.Row="2" Grid.Column="1" FontSize="20" FontWeight="Bold" FontFamily="Book Antiqua" Foreground="#3BB9FF" HorizontalContentAlignment="Center" VerticalAlignment="Center" />
+        <Label Content="PASSWORD" Grid.Row="3" Grid.Column="1" FontSize="20" FontWeight="Bold" FontFamily="Book Antiqua" Foreground="#3BB9FF" HorizontalContentAlignment="Center" VerticalAlignment="Center"/>
+
+        <TextBox     x:Name="TB_Username" Grid.Row="2" Grid.Column="2"   Margin="29,10,28,17"  FontSize="22"/>
+        <PasswordBox x:Name="TB_Password" Grid.Row="3" Grid.Column="2"  Margin="29,10,28,17"  VerticalContentAlignment="Bottom" FontSize="22"/>
+
+        <Button x:Name="BTN_LOGIN" Background="#3BB9FF" Content="LOGIN" FontWeight="Bold" Foreground="White" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Margin="55,0,183,25"     >
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="14"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button BorderThickness="0" x:Name="BTN_Clear" Content="Clear" Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="2" Margin="34,0,183,21" Background="White" Foreground="#3BB9FF" FontSize="22" FontWeight="Bold" FontFamily="Lucida Handwriting" />
+
+
     </Grid>
 </Window>
