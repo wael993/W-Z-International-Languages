@@ -41,7 +41,7 @@ namespace W_Z_International_Languages {
     public partial class MainWindow : System.Windows.Window, System.Windows.Markup.IComponentConnector {
         
         
-        #line 34 "..\..\MainWindow.xaml"
+        #line 31 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox TB_Username;
         
@@ -49,7 +49,7 @@ namespace W_Z_International_Languages {
         #line hidden
         
         
-        #line 35 "..\..\MainWindow.xaml"
+        #line 32 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.PasswordBox TB_Password;
         
@@ -57,7 +57,7 @@ namespace W_Z_International_Languages {
         #line hidden
         
         
-        #line 37 "..\..\MainWindow.xaml"
+        #line 34 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button BTN_LOGIN;
         
@@ -65,7 +65,7 @@ namespace W_Z_International_Languages {
         #line hidden
         
         
-        #line 44 "..\..\MainWindow.xaml"
+        #line 41 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button BTN_Clear;
         
