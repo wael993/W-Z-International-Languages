@@ -10,11 +10,11 @@
 
         <Grid.RowDefinitions>
             <RowDefinition/>
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="216*"/>
@@ -24,14 +24,11 @@
         <TextBlock Grid.Row="0" Grid.Column="0" FontSize="22" FontFamily="Century" FontWeight="Bold" Foreground="#3BB9FF" Text="W_Z International Languages" Margin="5,19,93,12" Grid.ColumnSpan="2"/>
         <TextBlock FontSize="22" FontFamily="Century" FontWeight="Bold" Foreground="#3BB9FF" Text="LOGIN" Margin="87,16,53,27" Grid.Row="1" Grid.Column="2"/>
         <Border Background="#3BB9FF" CornerRadius="200" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Margin="-11,0,-10,-259" Width="817" Grid.Row="4" Grid.ColumnSpan="3" Height="394" VerticalAlignment="Bottom" Grid.RowSpan="2"/>
-        <Label Grid.Row="1" Grid.Column="0" FontSize="20" FontWeight="Bold" Foreground="White" FontFamily="Book Antiqua" Content="Welcommen"  Margin="48,24,80,0" />
-        <Label Grid.Row="2" Grid.Column="0" FontSize="24" FontWeight="Bold" Foreground="White" FontFamily="Book Antiqua" Content="HBSFWI"  Margin="48,24,99,0" />
-        <Label Grid.Row="3" Grid.Column="0" FontSize="20" FontWeight="Bold" Foreground="White" FontFamily="Book Antiqua" Content="Online Bibleothek" Margin="10,24,80,0" />
 
-        <Label Content="USERNAME" Grid.Row="2" Grid.Column="1" FontSize="20" FontWeight="Bold" FontFamily="Book Antiqua" Foreground="#3BB9FF" HorizontalContentAlignment="Center" VerticalAlignment="Center" />
+        <Label Content="USERNAME" Grid.Row="1" FontSize="12" FontWeight="Bold" FontFamily="Book Antiqua" Foreground="#3BB9FF" HorizontalContentAlignment="Left" VerticalAlignment="Bottom" Height="23" Grid.ColumnSpan="2" Margin="264,0,2,67" Grid.RowSpan="2"  />
         <Label Content="PASSWORD" Grid.Row="3" Grid.Column="1" FontSize="20" FontWeight="Bold" FontFamily="Book Antiqua" Foreground="#3BB9FF" HorizontalContentAlignment="Center" VerticalAlignment="Center"/>
 
-        <TextBox     x:Name="TB_Username" Grid.Row="2" Grid.Column="2"   Margin="29,10,28,17"  FontSize="22"/>
+        <TextBox     x:Name="TB_Username" Grid.Row="2" Grid.Column="1"   Margin="4,10,25,17"  FontSize="22"/>
         <PasswordBox x:Name="TB_Password" Grid.Row="3" Grid.Column="2"  Margin="29,10,28,17"  VerticalContentAlignment="Bottom" FontSize="22"/>
 
         <Button x:Name="BTN_LOGIN" Background="#3BB9FF" Content="LOGIN" FontWeight="Bold" Foreground="White" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Margin="55,19,183,14"     >
