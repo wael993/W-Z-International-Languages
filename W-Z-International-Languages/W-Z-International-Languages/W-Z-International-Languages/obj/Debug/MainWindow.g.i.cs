@@ -40,38 +40,6 @@ namespace W_Z_International_Languages {
     /// </summary>
     public partial class MainWindow : System.Windows.Window, System.Windows.Markup.IComponentConnector {
         
-        
-        #line 31 "..\..\MainWindow.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.TextBox TB_Username;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 32 "..\..\MainWindow.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.PasswordBox TB_Password;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 34 "..\..\MainWindow.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Button BTN_LOGIN;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 41 "..\..\MainWindow.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Button BTN_Clear;
-        
-        #line default
-        #line hidden
-        
         private bool _contentLoaded;
         
         /// <summary>
@@ -100,27 +68,6 @@ namespace W_Z_International_Languages {
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
         void System.Windows.Markup.IComponentConnector.Connect(int connectionId, object target) {
-            switch (connectionId)
-            {
-            case 1:
-            this.TB_Username = ((System.Windows.Controls.TextBox)(target));
-            return;
-            case 2:
-            this.TB_Password = ((System.Windows.Controls.PasswordBox)(target));
-            return;
-            case 3:
-            this.BTN_LOGIN = ((System.Windows.Controls.Button)(target));
-            
-            #line 34 "..\..\MainWindow.xaml"
-            this.BTN_LOGIN.Click += new System.Windows.RoutedEventHandler(this.BTN_LOGIN_Click);
-            
-            #line default
-            #line hidden
-            return;
-            case 4:
-            this.BTN_Clear = ((System.Windows.Controls.Button)(target));
-            return;
-            }
             this._contentLoaded = true;
         }
     }
