@@ -14,7 +14,7 @@
             <RowDefinition Height="0.8*"/>
             <RowDefinition Height="3*"/>
         </Grid.RowDefinitions>
-        <Border Grid.Row="0" Background="#5EB506" Opacity="0.85" Margin="0,30,0,0" />
+        <Border Grid.Row="0" Background="#2D8395" Opacity="0.85" Margin="0,30,0,0" />
         <WrapPanel Margin="0,30,0,0">
         <Border Grid.Row="0" CornerRadius="4" HorizontalAlignment="Left" >
             <Image Source="F:\Arbeit\projekt\Logo.png" />
@@ -22,16 +22,27 @@
         </Border>
             <TextBlock Text="W_Z International Languages und Education" FontSize="35" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="70" Foreground="Snow"/>
         </WrapPanel>
-        <Border Grid.Row="1"  Width="520" Margin="0,70,0,70">
+        <Border BorderBrush="#B8C4C6"  BorderThickness="3" Grid.Row="1"  Width="520" Margin="0,70,0,70" Background="Black" Opacity="0.35"></Border>
+        <Border BorderBrush="#B8C4C6"  BorderThickness="3" Grid.Row="1"  Width="520" Margin="0,70,0,70"  >
         <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                     <RowDefinition/>
                     <RowDefinition/>
                     <RowDefinition/>
+                    <RowDefinition/>
                 </Grid.RowDefinitions>
                 <Image Source="F:\Arbeit\projekt\imag.png" />
-
+                <TextBlock Grid.Row="1"  Text="Please Login First !" VerticalAlignment="Top"  HorizontalAlignment="Center"  FontSize="32" FontWeight="Bold" Foreground="#147185" />
+                <WrapPanel Grid.Row="2">
+                    <Image Source="F:\Arbeit\projekt\Login_logo.png" Margin="20,0,0,0" Width="100"/>
+                    <TextBox Text="User Name" Width="380" FontSize="26" Foreground="#B8C4C6" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" />
+                </WrapPanel>
+                <WrapPanel Grid.Row="3">
+                    <Image Source="F:\Arbeit\projekt\Pass_Logo_.png" Margin="20,0,0,0" Width="100"/>
+                    <TextBox Text="Pass Word" Width="380" FontSize="26" Foreground="#B8C4C6" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" />
+                </WrapPanel>
+                <Button Grid.Row="4" Content="Login" Height="80" FontSize="36" FontWeight="Bold" Background="#2D8395" Foreground="#B8C4C6"   Margin="20,0,20,20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
             </Grid>
         </Border>
     </Grid>
