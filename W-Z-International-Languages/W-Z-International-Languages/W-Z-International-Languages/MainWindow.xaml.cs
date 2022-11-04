@@ -20,6 +20,7 @@ namespace W_Z_International_Languages
     /// </summary>
     public partial class MainWindow : Window
     {
+        Home home = new Home();
         public MainWindow()
         {
             InitializeComponent();
@@ -43,7 +44,7 @@ namespace W_Z_International_Languages
 
         private void LogIn_Click(object sender, RoutedEventArgs e)
         {
-
+            home.Show();
         }
     }
 }

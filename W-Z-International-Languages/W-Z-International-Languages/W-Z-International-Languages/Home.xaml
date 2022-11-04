@@ -1,0 +1,89 @@
+﻿<Window x:Class="W_Z_International_Languages.Home"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:W_Z_International_Languages"
+        mc:Ignorable="d"
+        Title="Home" Height="1000" Width="1600"  WindowState="Maximized">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="F:\Arbeit\projekt\images ().jfif" />
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <Border Grid.Row="0" Background="#2D8395"  />
+        
+        <Menu Background="Transparent" FontSize="32" FontWeight="Medium" >
+            
+            <MenuItem Foreground="#B8C4C6"  Padding="12"  >
+                <MenuItem.Header>
+                    <WrapPanel Background="#2D8395" >
+                      <Image Height="60" Width="60"  Source="F:\Arbeit\projekt\images (2).png"></Image>
+                        <ContentPresenter  Content="W_Z"/>
+
+                    </WrapPanel>
+                </MenuItem.Header>
+                <MenuItem Header="sffds"/>
+            </MenuItem>
+
+
+
+            <MenuItem Foreground="#B8C4C6"  Padding="12" >
+                <MenuItem.Header>
+                    <WrapPanel Background="#2D8395" >
+                        <Image Height="60" Width="60"  Source="F:\Arbeit\projekt\images (2).png"></Image>
+                        <ContentPresenter  Content="Dashboard"/>
+
+                    </WrapPanel>
+                </MenuItem.Header>
+            </MenuItem>
+            
+               <MenuItem Foreground="#B8C4C6"  Padding="12" >
+                <MenuItem.Header>
+                    <WrapPanel Background="#2D8395" >
+                        <Image Height="60" Width="60"  Source="F:\Arbeit\projekt\Student_Menu.png"></Image>
+                        <ContentPresenter  Content="Student"/>
+
+                    </WrapPanel>
+                </MenuItem.Header>
+            </MenuItem>
+
+            <MenuItem Foreground="#B8C4C6"  Padding="12" >
+                <MenuItem.Header>
+                    <WrapPanel Background="#2D8395" >
+                        <Image Height="60" Width="60"  Source="F:\Arbeit\projekt\images (2).png"></Image>
+                        <ContentPresenter  Content="Course"/>
+
+                    </WrapPanel>
+                </MenuItem.Header>
+            </MenuItem>
+
+
+            <MenuItem Foreground="#B8C4C6"  Padding="12" >
+                <MenuItem.Header>
+                    <WrapPanel Background="#2D8395" >
+                        <Image Height="60" Width="60"  Source="F:\Arbeit\projekt\images (2).png"></Image>
+                        <ContentPresenter  Content="About as"/>
+
+                    </WrapPanel>
+                </MenuItem.Header>
+            </MenuItem>
+
+            <MenuItem Foreground="#B8C4C6"  Padding="12" >
+                <MenuItem.Header>
+                    <WrapPanel Background="#2D8395" >
+                        <Image Height="60" Width="60"  Source="F:\Arbeit\projekt\Exit_Menu.png"></Image>
+                        <ContentPresenter  Content="Exit"/>
+
+                    </WrapPanel>
+                </MenuItem.Header>
+            </MenuItem>
+        </Menu>
+        
+        
+    </Grid>
+</Window>
