@@ -23,5 +23,25 @@ namespace W_Z_International_Languages
         {
             InitializeComponent();
         }
+
+        private void UserName_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void UserName_MouseDown_1(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void BTN_LOGIN_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BTN_Clear_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
