@@ -10,25 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace W_Z_International_Languages
 {
     /// <summary>
-    /// Interaktionslogik für MainWindow.xaml
+    /// Interaktionslogik für Window2.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Window2 : Window
     {
-        Window2 Window21 = new Window2();
-        public MainWindow()
+        public Window2()
         {
             InitializeComponent();
-        }
-
-        private void BTN_LOGIN_Click(object sender, RoutedEventArgs e)
-        {
-            Window21.Show();
         }
     }
 }

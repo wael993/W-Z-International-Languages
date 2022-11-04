@@ -31,7 +31,7 @@
         <TextBox     x:Name="TB_Username" Grid.Row="2" Grid.Column="1"   Margin="4,10,25,17"  FontSize="22"/>
         <PasswordBox x:Name="TB_Password" Grid.Row="3" Grid.Column="2"  Margin="29,10,28,17"  VerticalContentAlignment="Bottom" FontSize="22"/>
 
-        <Button x:Name="BTN_LOGIN" Background="#3BB9FF" Content="LOGIN" FontWeight="Bold" Foreground="White" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Margin="55,19,183,14"     >
+        <Button Click="BTN_LOGIN_Click"  x:Name="BTN_LOGIN" Background="#3BB9FF" Content="LOGIN" FontWeight="Bold" Foreground="White" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Margin="55,19,183,14"     >
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="14"/>
