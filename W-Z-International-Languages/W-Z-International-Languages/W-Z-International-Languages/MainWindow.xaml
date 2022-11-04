@@ -36,13 +36,13 @@
                 <TextBlock Grid.Row="1"  Text="Please Login First !" VerticalAlignment="Top"  HorizontalAlignment="Center"  FontSize="32" FontWeight="Bold" Foreground="#147185" />
                 <WrapPanel Grid.Row="2">
                     <Image Source="F:\Arbeit\projekt\Login_logo.png" Margin="20,0,0,0" Width="100"/>
-                    <TextBox Text="User Name" Width="380" FontSize="26" Foreground="#B8C4C6" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" />
+                    <TextBox x:Name="UserName" Text="User Name" Width="380" FontSize="26" Foreground="#B8C4C6" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" GotFocus="UserName_GotFocus"/>
                 </WrapPanel>
                 <WrapPanel Grid.Row="3">
                     <Image Source="F:\Arbeit\projekt\Pass_Logo_.png" Margin="20,0,0,0" Width="100"/>
-                    <TextBox Text="Pass Word" Width="380" FontSize="26" Foreground="#B8C4C6" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" />
+                    <TextBox x:Name="Pass" Text="Pass Word" Width="380" FontSize="26" Foreground="#B8C4C6" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" GotFocus="Pass_GotFocus" />
                 </WrapPanel>
-                <Button Grid.Row="4" Content="Login" Height="80" FontSize="36" FontWeight="Bold" Background="#2D8395" Foreground="#B8C4C6"   Margin="20,0,20,20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                <Button x:Name="LogIn" Grid.Row="4" Content="Login" Height="70" FontSize="36" FontWeight="Bold" Background="#2D8395" Foreground="#B8C4C6"   Margin="20,0,20,20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="LogIn_Click"/>
             </Grid>
         </Border>
     </Grid>

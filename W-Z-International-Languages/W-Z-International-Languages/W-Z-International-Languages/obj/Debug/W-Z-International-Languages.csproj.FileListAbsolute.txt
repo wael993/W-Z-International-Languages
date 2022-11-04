@@ -13,7 +13,3 @@ F:\Arbeit\projekt\Zweit\W-Z-International-Languages\W-Z-International-Languages\
 F:\Arbeit\projekt\Zweit\W-Z-International-Languages\W-Z-International-Languages\W-Z-International-Languages\obj\Debug\W-Z-International-Languages.csproj.CoreCompileInputs.cache
 F:\Arbeit\projekt\Zweit\W-Z-International-Languages\W-Z-International-Languages\W-Z-International-Languages\obj\Debug\W-Z-International-Languages.exe
 F:\Arbeit\projekt\Zweit\W-Z-International-Languages\W-Z-International-Languages\W-Z-International-Languages\obj\Debug\W-Z-International-Languages.pdb
-F:\Arbeit\projekt\Zweit\W-Z-International-Languages\W-Z-International-Languages\W-Z-International-Languages\obj\Debug\Window1.g.cs
-F:\Arbeit\projekt\Zweit\W-Z-International-Languages\W-Z-International-Languages\W-Z-International-Languages\obj\Debug\Window2.g.cs
-F:\Arbeit\projekt\Zweit\W-Z-International-Languages\W-Z-International-Languages\W-Z-International-Languages\obj\Debug\Window1.baml
-F:\Arbeit\projekt\Zweit\W-Z-International-Languages\W-Z-International-Languages\W-Z-International-Languages\obj\Debug\Window2.baml

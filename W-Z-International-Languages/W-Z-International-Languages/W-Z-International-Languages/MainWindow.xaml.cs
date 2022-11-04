@@ -20,15 +20,30 @@ namespace W_Z_International_Languages
     /// </summary>
     public partial class MainWindow : Window
     {
-        Window2 Window21 = new Window2();
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        private void BTN_LOGIN_Click(object sender, RoutedEventArgs e)
+        private void UserName_GotFocus(object sender, RoutedEventArgs e)
         {
-            Window21.Show();
+            if (UserName.Text == "User Name")
+            {
+                UserName.Text = "";
+            }
+        }
+
+        private void Pass_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if (Pass.Text == "Pass Word")
+            {
+                Pass.Text = "";
+            }
+        }
+
+        private void LogIn_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
