@@ -19,16 +19,7 @@
         
         <Menu Background="Transparent" FontSize="32" FontWeight="Medium" >
             
-            <MenuItem Foreground="#B8C4C6"  Padding="12"  >
-                <MenuItem.Header>
-                    <WrapPanel Background="#2D8395" >
-                      <Image Height="60" Width="60"  Source="F:\Arbeit\projekt\images (2).png"></Image>
-                        <ContentPresenter  Content="W_Z"/>
-
-                    </WrapPanel>
-                </MenuItem.Header>
-                <MenuItem Header="sffds"/>
-            </MenuItem>
+     
 
 
 
@@ -40,6 +31,8 @@
 
                     </WrapPanel>
                 </MenuItem.Header>
+                <MenuItem Background="#05938C" Foreground="Snow" Header="Englisch Courses for Adults"/>
+
             </MenuItem>
             
                <MenuItem Foreground="#B8C4C6"  Padding="12" >
@@ -50,6 +43,10 @@
 
                     </WrapPanel>
                 </MenuItem.Header>
+                <MenuItem Background="#05938C" Foreground="Snow" Header="Registration"/>
+                <MenuItem Background="#05938C" Foreground="Snow" Header="Manage Student"/>
+                <MenuItem Background="#05938C" Foreground="Snow" Header="Print"/>
+
             </MenuItem>
 
             <MenuItem Foreground="#B8C4C6"  Padding="12" >
@@ -60,6 +57,9 @@
 
                     </WrapPanel>
                 </MenuItem.Header>
+                <MenuItem Background="#05938C" Foreground="Snow" Header="New Course"/>
+                <MenuItem Background="#05938C" Foreground="Snow" Header="Manage Course"/>
+                <MenuItem Background="#05938C" Foreground="Snow" Header="Print"/>
             </MenuItem>
 
 
@@ -67,17 +67,21 @@
                 <MenuItem.Header>
                     <WrapPanel Background="#2D8395" >
                         <Image Height="60" Width="60"  Source="F:\Arbeit\projekt\images (2).png"></Image>
-                        <ContentPresenter  Content="About as"/>
+                        <ContentPresenter  Content="Why us ?"/>
 
                     </WrapPanel>
                 </MenuItem.Header>
+                <MenuItem Background="#05938C" Foreground="Snow" Header="About W_Z"/>
+                <MenuItem Background="#05938C" Foreground="Snow" Header="Our Locations"/>
+                <MenuItem Background="#05938C" Foreground="Snow" Header="Our school and service"/>
+                <MenuItem Background="#05938C" Foreground="Snow" Header="Student Portal"/>
             </MenuItem>
 
-            <MenuItem Foreground="#B8C4C6"  Padding="12" >
+            <MenuItem Foreground="#B8C4C6"  Padding="12" GotFocus="MenuItem_GotFocus" >
                 <MenuItem.Header>
                     <WrapPanel Background="#2D8395" >
                         <Image Height="60" Width="60"  Source="F:\Arbeit\projekt\Exit_Menu.png"></Image>
-                        <ContentPresenter  Content="Exit"/>
+                        <ContentPresenter  Content="Exit" />
 
                     </WrapPanel>
                 </MenuItem.Header>

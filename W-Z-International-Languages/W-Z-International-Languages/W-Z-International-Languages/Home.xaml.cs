@@ -19,9 +19,17 @@ namespace W_Z_International_Languages
     /// </summary>
     public partial class Home : Window
     {
+       
         public Home()
         {
             InitializeComponent();
+        }
+
+     
+
+        private void MenuItem_GotFocus(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }
