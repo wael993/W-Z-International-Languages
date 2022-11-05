@@ -31,5 +31,19 @@ namespace W_Z_International_Languages
         {
             this.Close();
         }
+
+        private void MenuItem_Registration_Click(object sender, RoutedEventArgs e)
+        {
+            Student_Registration.Visibility = Visibility.Visible;
+            Student_Mang1.Visibility = Visibility.Hidden;
+
+        }
+
+        private void MenuItem_Manage_Student_Click(object sender, RoutedEventArgs e)
+        {
+            Student_Mang1.Visibility = Visibility.Visible;
+            Student_Registration.Visibility = Visibility.Hidden;
+
+        }
     }
 }
