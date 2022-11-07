@@ -19,26 +19,19 @@
         
         <Menu Background="Transparent" FontSize="32" FontWeight="Medium" >
 
-            <!--<MenuItem >
-                <MenuItem.Header>
-                    <Image Height="60" Width="60"  Source="F:\Arbeit\projekt\Haupt6.png"></Image>
-                </MenuItem.Header>
-            </MenuItem>-->
 
-
-            <MenuItem Foreground="#B8C4C6"  Padding="12" >
-                <MenuItem.Header>
-                    <WrapPanel Background="#2D8395" >
+            <MenuItem Foreground="#B8C4C6"  Padding="12" Click="Dashboard_MenuItem_Click">
+                <MenuItem.Header >
+                    <WrapPanel Background="#2D8395">
                         <Image Height="60" Width="60"  Source="F:\Arbeit\projekt\images (2).png"></Image>
-                        <ContentPresenter  Content="Dashboard"/>
+                        <ContentPresenter  Content="Dashboard" />
 
                     </WrapPanel>
                 </MenuItem.Header>
-                <MenuItem Background="#05938C" Foreground="Snow" Header="Englisch Courses for Adults"/>
 
             </MenuItem>
             
-               <MenuItem Foreground="#B8C4C6"  Padding="12" >
+               <MenuItem Foreground="#B8C4C6"  Padding="12"  >
                 <MenuItem.Header>
                     <WrapPanel Background="#2D8395" >
                         <Image Height="60" Width="60"  Source="F:\Arbeit\projekt\Student_Menu.png"></Image>

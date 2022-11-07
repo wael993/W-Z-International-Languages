@@ -48,7 +48,7 @@ namespace W_Z_International_Languages
 
         private void Dashboard_MenuItem_Click(object sender, RoutedEventArgs e)
         {
-            Student_Mang1.Visibility = Visibility.Visible;
+            Student_Mang1.Visibility = Visibility.Hidden;
             Student_Registration.Visibility = Visibility.Hidden;
         }
     }
