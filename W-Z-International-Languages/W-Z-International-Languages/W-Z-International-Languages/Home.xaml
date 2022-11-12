@@ -49,11 +49,11 @@
                 <MenuItem.Header>
                     <WrapPanel Background="#2D8395" >
                         <Image Height="60" Width="60"  Source="F:\Arbeit\projekt\images (2).png"></Image>
-                        <ContentPresenter  Content="Course"/>
+                        <ContentPresenter  Content="Course" />
 
                     </WrapPanel>
                 </MenuItem.Header>
-                <MenuItem Background="#05938C" Foreground="Snow" Header="New Course"/>
+                <MenuItem Background="#05938C" Foreground="Snow" Header="New Course" Click="Course_Click"/>
                 <MenuItem Background="#05938C" Foreground="Snow" Header="Manage Course"/>
                 <MenuItem Background="#05938C" Foreground="Snow" Header="Print"/>
             </MenuItem>
@@ -92,7 +92,7 @@
                 <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
             <TextBlock Text="Student verwaltung" Height="75" TextAlignment="Center" Padding="15" Grid.Row="0" Background="#2D8395" Foreground="White" FontSize="30" FontWeight="Bold"   />
-            <TextBox  Grid.Row="1" x:Name="tbx_student" HorizontalAlignment="Right" Height="32" Width="250" Foreground="Wheat" Text="Suche" FontSize="22" HorizontalContentAlignment="Center" Background="Transparent" />
+            <TextBox  Grid.Row="1" x:Name="tbx_search" HorizontalAlignment="Right" Height="32" Width="250" Foreground="Wheat" Text="search" FontSize="22" HorizontalContentAlignment="Center" Background="Transparent" GotFocus="tbx_search_GotFocus" />
 
             <DataGrid Grid.Row="2" 
                       ItemsSource="{Binding}"
@@ -191,7 +191,7 @@
                 <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
             <TextBlock Text="Students Manage" Height="75" TextAlignment="Center" Padding="15" Grid.Row="0" Background="#2D8395" Foreground="White" FontSize="30" FontWeight="Bold"   />
-            <TextBox  Grid.Row="1" x:Name="bx_student" HorizontalAlignment="Right" Height="32" Width="250" Foreground="Wheat" Text="Suche" FontSize="22" HorizontalContentAlignment="Center" Background="Transparent" />
+            <TextBox  Grid.Row="1" x:Name="tbx_Search" HorizontalAlignment="Right" Height="32" Width="250" Foreground="Wheat" Text="search" FontSize="22" HorizontalContentAlignment="Center" Background="Transparent" GotFocus="tbx_Search_GotFocus_1" />
 
             <DataGrid Grid.Row="2" 
                       ItemsSource="{Binding}"
@@ -281,6 +281,78 @@
             </Grid>
         </Grid>
 
+        <!--New_Course_Grid-->
+        <Grid x:Name="New_Course" Grid.Row="1" Visibility="Visible" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <TextBlock Text="Course View" Height="75" TextAlignment="Center" Padding="15" Grid.Row="0" Background="#2D8395" Foreground="White" FontSize="30" FontWeight="Bold"   />
+            <TextBox  Grid.Row="1" x:Name="tbxs_Search" HorizontalAlignment="Right" Height="32" Width="250" Foreground="Wheat" Text="search" FontSize="22" HorizontalContentAlignment="Center" Background="Transparent" GotFocus="tbxs_Search_GotFocus" />
 
+            <DataGrid Grid.Row="2" 
+                      FontSize="19"
+                      ItemsSource="{Binding}"
+                      AutoGenerateColumns="False"               
+                      IsReadOnly="False"
+                      CanUserAddRows="False"
+                      IsSynchronizedWithCurrentItem="True"
+                      RowHeight="35"
+                      Background="Transparent">
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn  Header="Course ID" Width="150"   Binding="{Binding }"  />
+                    <DataGridTextColumn Header="Course Name" Width="170" Binding="{Binding }" />
+                    <DataGridTextColumn Header="Course Hour" Width="140" IsReadOnly="True" Binding="{Binding }"/>
+                    <DataGridTextColumn Header="Description" Width="*"  Binding="{Binding }"/>
+                </DataGrid.Columns>
+            </DataGrid>
+
+
+            <Grid Background="#F1F1E5"  Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+
+                <Label Content="Course Name:" Grid.Row="0" Grid.Column="0"  FontSize="18" Margin="0 10 50 0" Foreground="#2D8395"/>
+                <TextBox Background="Snow" x:Name="B_StsudentVorName" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" FontSize="22"  Margin="0 10 0 0" Foreground="Snow"/>
+
+
+                <Label Content="Hour:  " Grid.Row="1" Grid.Column="0"  FontSize="18" Margin="0 10 50 0" Foreground="#2D8395"/>
+                <TextBox Background="Snow" x:Name="B_StusdentID" Grid.Row="1" Grid.Column="1" FontSize="22" Margin="0 10 180 0" Foreground="Snow"/>
+
+
+
+                <Label Content="Description: " Grid.Row="3" Grid.Column="0" FontSize="18" Margin="0 10 50 0" Foreground="#2D8395"/>
+                <TextBox Background="Snow" x:Name="B_SdtusdentUserName" Grid.RowSpan="2" Grid.Row="3" Grid.ColumnSpan="2" Grid.Column="1" FontSize="22"  Margin="0 10 0 10" Foreground="Snow"/>
+
+                
+
+                <Button x:Name="BT_SstudentLoeschen" Content="Clear" FontWeight="Bold" Foreground="White" Background="Orange" Grid.Row="4" Grid.Column="3" FontSize="22"  Height="40"  Margin="40 10 40 10"   />
+                <Button x:Name="t_StusdentUpdat" Content="Add" FontWeight="Bold" Foreground="White" Background="#50C878" Grid.Row="4" Grid.Column="4" FontSize="22"  Height="40"  Margin="40 10 40 10"/>
+
+                <Label  Grid.Column="2" Grid.Row="5" x:Name="iddsen_St_ID"  Visibility="Hidden" Content="{Binding }"/>
+
+            </Grid>
+        </Grid>
+
+        <!--new-->
+        
+        
+        
     </Grid>
 </Window>

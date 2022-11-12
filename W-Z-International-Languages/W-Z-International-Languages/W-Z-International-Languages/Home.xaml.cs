@@ -36,6 +36,7 @@ namespace W_Z_International_Languages
         {
             Student_Registration.Visibility = Visibility.Visible;
             Student_Mang1.Visibility = Visibility.Hidden;
+            New_Course.Visibility = Visibility.Hidden;
 
         }
 
@@ -43,6 +44,7 @@ namespace W_Z_International_Languages
         {
             Student_Mang1.Visibility = Visibility.Visible;
             Student_Registration.Visibility = Visibility.Hidden;
+            New_Course.Visibility = Visibility.Hidden;
 
         }
 
@@ -50,6 +52,44 @@ namespace W_Z_International_Languages
         {
             Student_Mang1.Visibility = Visibility.Hidden;
             Student_Registration.Visibility = Visibility.Hidden;
+            New_Course.Visibility = Visibility.Hidden;
+
         }
+
+        private void Course_Click(object sender, RoutedEventArgs e)
+        {
+            New_Course.Visibility = Visibility.Visible;
+            Student_Mang1.Visibility = Visibility.Hidden;
+            Student_Registration.Visibility = Visibility.Hidden;
+        }
+
+        private void tbx_search_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if (tbx_search.Text == "search")
+            {
+                tbx_search.Text = "";
+            }
+        }
+
+        private void tbx_Search_GotFocus_1(object sender, RoutedEventArgs e)
+        {
+            if (tbx_Search.Text == "search")
+            {
+                tbx_Search.Text = "";
+            }
+        }
+
+        private void tbxs_Search_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if (tbx_Search.Text == "search")
+            {
+                tbx_Search.Text = "";
+            }
+
+        }
+
+     
+
+     
     }
 }

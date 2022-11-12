@@ -23,6 +23,7 @@ namespace W_Z_International_Languages
         Home home = new Home();
         public MainWindow()
         {
+
             InitializeComponent();
         }
 
