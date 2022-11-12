@@ -84,7 +84,7 @@
             </MenuItem>
         </Menu>
         <Border Grid.Row="1" Background="Black" Opacity="0.65" ></Border>
-        <Grid x:Name="Student_Registration" Grid.Row="1" Visibility="Hidden" >
+        <Grid x:Name="Student_Registration" Grid.Row="1" Visibility="Visible" >
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
@@ -95,6 +95,7 @@
             <TextBox  Grid.Row="1" x:Name="tbx_search" HorizontalAlignment="Right" Height="32" Width="250" Foreground="Wheat" Text="search" FontSize="22" HorizontalContentAlignment="Center" Background="Transparent" GotFocus="tbx_search_GotFocus" />
 
             <DataGrid Grid.Row="2" 
+                      FontSize="19"
                       ItemsSource="{Binding}"
                       AutoGenerateColumns="False"               
                       IsReadOnly="False"
@@ -104,15 +105,13 @@
                       Background="Transparent">
 
                 <DataGrid.Columns>
-                    <DataGridTextColumn  Header="Vorname" Width="80" Binding="{Binding }"  />
-                    <DataGridTextColumn Header="Nachname" Width="80" Binding="{Binding }" />
-                    <DataGridTextColumn Header="Student ID" Width="80" IsReadOnly="True" Binding="{Binding }"/>
-                    <DataGridTextColumn Header="Studiengang" Width="80" Binding="{Binding }"/>
-                    <DataGridTextColumn Header="Semester" Width="80" Binding="{Binding }"/>
-                    <DataGridTextColumn Header="Status" Width="60" Binding="{Binding }"/>
-                    <!--MItareiter dürfen kein Rolle änderen-->
-                    <DataGridTextColumn Header="User Name" Width="80" Binding="{Binding }"/>
-                    <DataGridTextColumn Header="Passwort" Width="*"  Binding="{Binding }"/>
+                    <DataGridTextColumn Header="First Name" Width="110" Binding="{Binding }"  />
+                    <DataGridTextColumn Header="Last Name" Width="110" Binding="{Binding }" />
+                    <DataGridTextColumn Header="Student ID" Width="110" IsReadOnly="True" Binding="{Binding }"/>
+                    <DataGridTextColumn Header="Gender" Width="110" Binding="{Binding }"/>
+                    <DataGridTextColumn Header="Birthdate" Width="110" Binding="{Binding }"/>
+                    <DataGridTextColumn Header="Phane" Width="110" Binding="{Binding }"/>
+                    <DataGridTextColumn Header="Address" Width="*" Binding="{Binding }"/>
                 </DataGrid.Columns>
             </DataGrid>
 
@@ -134,28 +133,25 @@
                     <RowDefinition Height="auto"/>
                 </Grid.RowDefinitions>
 
-                <Label Content="Vorname :" Grid.Row="0" Grid.Column="0" FontSize="18" Margin="0 10 50 0" Foreground="Snow"/>
+                <Label Content="First Name: " Grid.Row="0" Grid.Column="0" FontSize="18" Margin="0 10 50 0" Foreground="Snow"/>
                 <TextBox Background="Transparent" x:Name="TB_StudentVorName" Grid.Row="0" Grid.Column="1" FontSize="22"  Margin="0 10 0 0" Foreground="Snow"/>
 
-                <Label Content="Nachname:" Grid.Row="0" Grid.Column="2" FontSize="18" Margin="0 10 50 0" HorizontalAlignment="Right" Foreground="Snow"/>
+                <Label Content="Last Name: " Grid.Row="0" Grid.Column="2" FontSize="18" Margin="0 10 50 0" HorizontalAlignment="Right" Foreground="Snow"/>
                 <TextBox Background="Transparent" x:Name="TB_StudentNachName" Grid.Row="0" Grid.Column="3" FontSize="22" Margin="0 10 0 0" Foreground="Snow"/>
 
-                <Label Content="Student_ID " Grid.Row="1" Grid.Column="0"  FontSize="18" Margin="0 10 50 0" Foreground="Snow"/>
+                <Label Content="Student ID: " Grid.Row="1" Grid.Column="0"  FontSize="18" Margin="0 10 50 0" Foreground="Snow"/>
                 <TextBox Background="Transparent" x:Name="TB_StudentID" Grid.Row="1" Grid.Column="1" FontSize="22" Margin="0 10 0 0" Foreground="Snow"/>
 
-                <Label  Content="Studiengang:" Grid.Row="1" Grid.Column="2" FontSize="18" Margin="0 10 50 0" HorizontalAlignment="Right" Foreground="Snow"/>
-                <TextBox Background="Transparent"  x:Name="TB_Studienangang"  Grid.Row="1" Grid.Column="3" FontSize="22" Margin="0 10 0 10" Foreground="Snow"/>
+                <Label  Content="Birthdate:" Grid.Row="1" Grid.Column="2" FontSize="18" Margin="0 10 50 0" HorizontalAlignment="Right" Foreground="Snow"/>
+                <DatePicker  Grid.Row="1" Grid.Column="3" FontSize="22" Margin="0 10 0 10"></DatePicker>
 
-                <Label Content="Semester " Grid.Row="2" Grid.Column="0" FontSize="18" Margin="0 10 50 0" Foreground="Snow"/>
-                <ComboBox Background="Transparent" x:Name="CB_StudentSemester" Text="Select Semester" FontSize="22" Margin="0 10 0 0" Grid.Row="2" Grid.Column="1"  IsEditable="true"
+                <!--<TextBox Background="Transparent"  x:Name="TB_Studienangang"  Grid.Row="1" Grid.Column="3" FontSize="22" Margin="0 10 0 10" Foreground="Snow"/>-->
+
+                <Label Content="Gender " Grid.Row="2" Grid.Column="0" FontSize="18" Margin="0 10 50 0" Foreground="Snow"/>
+                <ComboBox Background="Transparent" x:Name="CB_StudentSemester" Text="Female" FontSize="22" Margin="0 10 0 0" Grid.Row="2" Grid.Column="1"  IsEditable="true"
                      IsReadOnly="true"  >
-                    <ComboBoxItem>1</ComboBoxItem>
-                    <ComboBoxItem>2</ComboBoxItem>
-                    <ComboBoxItem>3</ComboBoxItem>
-                    <ComboBoxItem>4</ComboBoxItem>
-                    <ComboBoxItem>5</ComboBoxItem>
-                    <ComboBoxItem>6</ComboBoxItem>
-                    <ComboBoxItem>7</ComboBoxItem>
+                    <ComboBoxItem>Male</ComboBoxItem>
+                    <ComboBoxItem>Female</ComboBoxItem>
                 </ComboBox>
 
                 <Label Content="Status " Grid.Row="2" Grid.Column="2" FontSize="18" Margin="0 10 50 0" HorizontalAlignment="Right" Foreground="Snow"/>
@@ -166,10 +162,10 @@
                     <ComboBoxItem>gesperrt</ComboBoxItem>
                 </ComboBox>
 
-                <Label Content="User Name :" Grid.Row="3" Grid.Column="0" FontSize="18" Margin="0 10 50 0" Foreground="Snow"/>
-                <TextBox Background="Transparent" x:Name="TB_SdtudentUserName" Grid.Row="3" Grid.Column="1" FontSize="22"  Margin="0 10 0 0" Foreground="Snow"/>
+                <Label Content="Address: " Grid.Row="3" Grid.Column="0" FontSize="18" Margin="0 10 50 0" Foreground="Snow"/>
+                <TextBox Background="Transparent" x:Name="TB_SdtudentUserName" AcceptsReturn="True" Grid.Row="3" Grid.RowSpan="2" Grid.Column="1" FontSize="22"  Margin="0 10 0 10" Foreground="Snow"/>
 
-                <Label Content="Passwort:" Grid.Row="3" Grid.Column="2" FontSize="18" Margin="0 10 50 0" HorizontalAlignment="Right" Foreground="Snow"/>
+                <Label Content="Phane:" Grid.Row="3" Grid.Column="2" FontSize="18" Margin="0 10 50 0" HorizontalAlignment="Right" Foreground="Snow"/>
                 <TextBox Background="Transparent" x:Name="TB_SdtudentPass" Grid.Row="3" Grid.Column="3" FontSize="22" Margin="0 10 0 0" Foreground="Snow"/>
 
 
@@ -282,7 +278,7 @@
         </Grid>
 
         <!--New_Course_Grid-->
-        <Grid x:Name="New_Course" Grid.Row="1" Visibility="Visible" >
+        <Grid x:Name="New_Course" Grid.Row="1" Visibility="Hidden" >
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
