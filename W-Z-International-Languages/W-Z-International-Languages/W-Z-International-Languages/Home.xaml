@@ -24,7 +24,7 @@
         <!--Navigation Bar_Grid-->
         <Menu Background="Transparent" FontSize="32" FontWeight="Medium" >
 
-            <MenuItem Foreground="#B8C4C6"  Padding="12" Click="Dashboard_MenuItem_Click">
+            <MenuItem Foreground="#B8C4C6"  Padding="12" Click="Dashboard_MenuItem_Click" >
                 <MenuItem.Header >
                     <WrapPanel Background="#2D8395">
                         <Image Height="60" Width="60"  Source="F:\Arbeit\projekt\images (2).png"></Image>
@@ -33,17 +33,17 @@
                 </MenuItem.Header>
             </MenuItem>
 
-            <!--<MenuItem Foreground="#B8C4C6"  Padding="12"  Click="MenuItem_view_Student_Click">-->
-            <MenuItem Foreground="#B8C4C6"  Padding="12" >
+            <MenuItem Foreground="#B8C4C6"  Padding="12"  >
                 <MenuItem.Header>
                     <WrapPanel Background="#2D8395" >
                         <Image Height="60" Width="60"  Source="F:\Arbeit\projekt\Student_Menu.png"></Image>
                         <ContentPresenter  Content="Student"/>
                     </WrapPanel>
                 </MenuItem.Header>
+                <MenuItem  Background="#05938C" Foreground="Snow" Header="View Student" Click="MenuItem_view_Student_Click"/>
                 <MenuItem  Background="#05938C" Foreground="Snow" Header="Registration" Click="MenuItem_Registration_Click"/>
                 <MenuItem Background="#05938C" Foreground="Snow" Header="Manage Student" Click="MenuItem_Manage_Student_Click"/>
-                <MenuItem Background="#05938C" Foreground="Snow" Header="Print"/>
+                <MenuItem Background="#05938C" Foreground="Snow" Header="Print" Click="MenuItem_Student_Print_Click"/>
             </MenuItem>
 
             <MenuItem Foreground="#B8C4C6"  Padding="12" >
@@ -53,9 +53,10 @@
                         <ContentPresenter  Content="Course" />
                     </WrapPanel>
                 </MenuItem.Header>
+                <MenuItem Background="#05938C" Foreground="Snow" Header="View Course" Click="View_Course_Click"/>
                 <MenuItem Background="#05938C" Foreground="Snow" Header="New Course" Click="New_Course_Click"/>
                 <MenuItem Background="#05938C" Foreground="Snow" Header="Manage Course" Click="Mang_Course_Click"/>
-                <MenuItem Background="#05938C" Foreground="Snow" Header="Print"/>
+                <MenuItem Background="#05938C" Foreground="Snow" Header="Print" Click="MenuItem_Course_Print_Click"/>
             </MenuItem>
 
             <MenuItem Foreground="#B8C4C6"  Padding="12" >
@@ -85,8 +86,9 @@
    
         <Border Grid.Row="1" Background="Black" Opacity="0.65" ></Border>
 
+        <!--Student_View_Grid-->
 
-        <!--<Grid x:Name="View_Student" Grid.Row="1" Visibility="Hidden" >
+        <Grid x:Name="View_Student" Grid.Row="1" Visibility="Hidden" >
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
@@ -95,7 +97,9 @@
             <TextBlock Text="View Student " Height="75" TextAlignment="Center" Padding="15" Grid.Row="0" Background="#2D8395" Foreground="White" FontSize="30" FontWeight="Bold"   />
             <TextBox  Grid.Row="1" x:Name="tbx_View_Student_search" HorizontalAlignment="Right" Height="32" Width="250" Foreground="Wheat" Text="Search" FontSize="22" HorizontalContentAlignment="Center" Background="Transparent" GotFocus="tbx_View_Student_search_GotFocus" />
 
-            <DataGrid Grid.Row="2" 
+            <DataGrid
+                      x:Name="DG_Student"
+                      Grid.Row="2" 
                       FontSize="19"
                       ItemsSource="{Binding}"
                       AutoGenerateColumns="False"               
@@ -114,8 +118,8 @@
                     <DataGridTextColumn Header="Address" Width="*" Binding="{Binding }"/>
                 </DataGrid.Columns>
             </DataGrid>
-        </Grid>-->
-
+        </Grid>
+        <!--Student_View_Grid-->
 
         <!--Student Registration_Grid-->
         <Grid x:Name="Student_Registration" Grid.Row="1" Visibility="Hidden" >
@@ -128,7 +132,8 @@
             <TextBlock Text="New Student " Height="75" TextAlignment="Center" Padding="15" Grid.Row="0" Background="#2D8395" Foreground="White" FontSize="30" FontWeight="Bold"   />
             <TextBox  Grid.Row="1" x:Name="tbx_Student_Registration_search" HorizontalAlignment="Right" Height="32" Width="250" Foreground="Wheat" Text="Search" FontSize="22" HorizontalContentAlignment="Center" Background="Transparent" GotFocus="tbx_Student_Registration_search_GotFocus" />
 
-            <DataGrid Grid.Row="2" 
+            <DataGrid 
+                      Grid.Row="2" 
                       FontSize="19"
                       ItemsSource="{Binding}"
                       AutoGenerateColumns="False"               
@@ -286,14 +291,40 @@
         </Grid>
         <!--Student Mang_Grid-->
 
-        
-        
-        
-        
-        <!--Muss new Grid für Course View-->
-        
-        
-        
+
+        <!--View_Course_Grid-->
+
+        <Grid x:Name="View_Course" Grid.Row="1" Visibility="Hidden" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <TextBlock Text="View Courses" Height="75" TextAlignment="Center" Padding="15" Grid.Row="0" Background="#2D8395" Foreground="White" FontSize="30" FontWeight="Bold"   />
+            <TextBox  Grid.Row="1" x:Name="tbx_view_Course_Search" HorizontalAlignment="Right" Height="32" Width="250" Foreground="Wheat" Text="Search" FontSize="22" HorizontalContentAlignment="Center" Background="Transparent" GotFocus="tbx_view_Course_Search_GotFocus" />
+
+            <DataGrid x:Name="DG_View_Course"
+                      Grid.Row="2" 
+                      FontSize="19"
+                      ItemsSource="{Binding}"
+                      AutoGenerateColumns="False"               
+                      IsReadOnly="False"
+                      CanUserAddRows="False"
+                      IsSynchronizedWithCurrentItem="True"
+                      RowHeight="35"
+                      Background="Transparent">
+                <DataGrid.Columns>
+                    <DataGridTextColumn  Header="Course ID" Width="150"   Binding="{Binding }"  />
+                    <DataGridTextColumn Header="Course Name" Width="170" Binding="{Binding }" />
+                    <DataGridTextColumn Header="Course Hour" Width="140" IsReadOnly="True" Binding="{Binding }"/>
+                    <DataGridTextColumn Header="Description" Width="*"  Binding="{Binding }"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+        <!--View_Course_Grid-->
+
+
         <!--New_Course_Grid-->
         <Grid x:Name="New_Course" Grid.Row="1" Visibility="Hidden" >
             <Grid.RowDefinitions>
@@ -305,7 +336,8 @@
             <TextBlock Text="New Course" Height="75" TextAlignment="Center" Padding="15" Grid.Row="0" Background="#2D8395" Foreground="White" FontSize="30" FontWeight="Bold"   />
             <TextBox  Grid.Row="1" x:Name="tbx_New_Course_Search" HorizontalAlignment="Right" Height="32" Width="250" Foreground="Wheat" Text="Search" FontSize="22" HorizontalContentAlignment="Center" Background="Transparent" GotFocus="tbx_New_Course_Search_GotFocus" />
 
-            <DataGrid Grid.Row="2" 
+            <DataGrid x:Name="DG_Course"
+                      Grid.Row="2" 
                       FontSize="19"
                       ItemsSource="{Binding}"
                       AutoGenerateColumns="False"               
