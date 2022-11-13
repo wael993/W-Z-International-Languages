@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,13 +21,18 @@ namespace W_Z_International_Languages
     /// </summary>
     public partial class Home : Window
     {
-       
+        private ICollectionView CollectionView;
+        W_Z_International_LanguagesEntities1 ctx = new W_Z_International_LanguagesEntities1();
+
         public Home()
         {
             InitializeComponent();
+            ctx.course_student.Load();
+            CollectionView = CollectionViewSource.GetDefaultView(ctx.course_student.Local);
+            Parents_Grid.DataContext = CollectionView;
         }
 
-     
+
 
         private void MenuItem_GotFocus(object sender, RoutedEventArgs e)
         {

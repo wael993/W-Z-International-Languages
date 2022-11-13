@@ -27,7 +27,45 @@ namespace W_Z_International_Languages
             InitializeComponent();
         }
 
-        private void UserName_GotFocus(object sender, RoutedEventArgs e)
+
+
+        private void LOGIN()
+        {
+            if (UserName.Text == "" || Pass.Text == "")
+            {
+                MessageBox.Show("Please Enter Username and Password");
+                UserName.Text = "";
+                Pass.Text = "";
+            }
+
+            else 
+            {
+               
+                    using (W_Z_International_LanguagesEntities1 db = new W_Z_International_LanguagesEntities1())    //Verbindung zur Datenbank wird aufgebaut und  neuen DBContext Angelegt. 
+                    {
+                        var list = db.student.Where(x => x.Username == UserName.Text && x.Password == Pass.Text).ToList();// Zugriff auf ("UserName","Passwort")Spalten in "Benutzer" Tabell. 
+                        foreach (var b in list)
+                        {
+                            home.Show();
+                                Close();
+                                return;
+                    }
+
+
+
+                        MessageBox.Show("Benutzername oder Passwort falsch!");
+                        UserName.Text = "";
+                        Pass.Text = "";
+
+
+                    }
+               
+
+
+            }
+
+            }
+            private void UserName_GotFocus(object sender, RoutedEventArgs e)
         {
             if (UserName.Text == "User Name")
             {
@@ -45,7 +83,21 @@ namespace W_Z_International_Languages
 
         private void LogIn_Click(object sender, RoutedEventArgs e)
         {
-            home.Show();
+            LOGIN();
+
+          
+        }
+        private void Grid_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)     //wenn User Enter auf Tastatur tippt  ==>Login
+            {
+                LOGIN();
+            }
+            else if (e.Key == Key.Delete) //wenn User Delete auf Tastatur tippt  ==> Username und Passwot von Textbox löschen
+            {
+                UserName.Text = "";
+                Pass.Text = "";
+            }
         }
     }
 }

@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="W_Z_International_LanguagesModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="course">
+    <Key>
+      <PropertyRef Name="courseID" />
+    </Key>
+    <Property Name="courseID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="course_Name" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="courseHour" Type="int" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="course_student">
+    <Key>
+      <PropertyRef Name="course_student_id" />
+    </Key>
+    <Property Name="course_student_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="course_student_datum" Type="date" Nullable="false" />
+    <Property Name="student_id" Type="int" />
+    <Property Name="courseID" Type="int" />
+  </EntityType>
+  <EntityType Name="student">
+    <Key>
+      <PropertyRef Name="student_id" />
+    </Key>
+    <Property Name="student_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="nvarchar" MaxLength="50" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Birthday" Type="date" Nullable="false" />
+    <Property Name="Gender" Type="bit" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="25" />
+    <Property Name="Adress" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="fk_course">
+    <End Role="course" Type="Self.course" Multiplicity="0..1" />
+    <End Role="course_student" Type="Self.course_student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="course">
+        <PropertyRef Name="courseID" />
+      </Principal>
+      <Dependent Role="course_student">
+        <PropertyRef Name="courseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_student">
+    <End Role="student" Type="Self.student" Multiplicity="0..1" />
+    <End Role="course_student" Type="Self.course_student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="student">
+        <PropertyRef Name="student_id" />
+      </Principal>
+      <Dependent Role="course_student">
+        <PropertyRef Name="student_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="W_Z_International_LanguagesModelStoreContainer">
+    <EntitySet Name="course" EntityType="Self.course" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="course_student" EntityType="Self.course_student" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="student" EntityType="Self.student" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="fk_course" Association="Self.fk_course">
+      <End Role="course" EntitySet="course" />
+      <End Role="course_student" EntitySet="course_student" />
+    </AssociationSet>
+    <AssociationSet Name="fk_student" Association="Self.fk_student">
+      <End Role="student" EntitySet="student" />
+      <End Role="course_student" EntitySet="course_student" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

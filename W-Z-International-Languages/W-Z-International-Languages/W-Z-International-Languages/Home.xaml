@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="Home" Height="1000" Width="1600"  WindowState="Maximized">
     <!--background Foto_Grid-->
-    
-    <Grid>
+
+    <Grid x:Name="Parents_Grid">
         <Grid.Background>
             <ImageBrush ImageSource="F:\Arbeit\projekt\images ().jfif" />
         </Grid.Background>
@@ -109,13 +109,13 @@
                       RowHeight="35"
                       Background="Transparent">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="First Name" Width="110" Binding="{Binding }"  />
-                    <DataGridTextColumn Header="Last Name" Width="110" Binding="{Binding }" />
-                    <DataGridTextColumn Header="Student ID" Width="110" IsReadOnly="True" Binding="{Binding }"/>
-                    <DataGridTextColumn Header="Gender" Width="110" Binding="{Binding }"/>
-                    <DataGridTextColumn Header="Birthdate" Width="110" Binding="{Binding }"/>
-                    <DataGridTextColumn Header="Phane" Width="110" Binding="{Binding }"/>
-                    <DataGridTextColumn Header="Address" Width="*" Binding="{Binding }"/>
+                    <DataGridTextColumn Header="First Name" Width="110" Binding="{Binding student.FirstName}"  />
+                    <DataGridTextColumn Header="Last Name" Width="110" Binding="{Binding student.LastName}" />
+                    <DataGridTextColumn Header="Student ID" Width="110" IsReadOnly="True" Binding="{Binding student.student_id}"/>
+                    <DataGridTextColumn Header="Gender" Width="110" Binding="{Binding student.Gender}"/>
+                    <DataGridTextColumn Header="Birthdate" Width="110" Binding="{Binding student.Birthday}"/>
+                    <DataGridTextColumn Header="Phane" Width="110" Binding="{Binding student.Phone}"/>
+                    <DataGridTextColumn Header="Address" Width="*" Binding="{Binding student.Adress}"/>
                 </DataGrid.Columns>
             </DataGrid>
         </Grid>
@@ -231,7 +231,7 @@
                     <DataGridTextColumn Header="Last Name" Width="110" Binding="{Binding }" />
                     <DataGridTextColumn Header="Student ID" Width="110" IsReadOnly="True" Binding="{Binding }"/>
                     <DataGridTextColumn Header="Gender" Width="110" Binding="{Binding }"/>
-                    <DataGridTextColumn Header="Birthdate" Width="110" Binding="{Binding }"/>
+                    <DataGridTextColumn Header="Birthday" Width="110" Binding="{Binding }"/>
                     <DataGridTextColumn Header="Phane" Width="110" Binding="{Binding }"/>
                     <DataGridTextColumn Header="Address" Width="*" Binding="{Binding }"/>
                 </DataGrid.Columns>
@@ -315,10 +315,10 @@
                       RowHeight="35"
                       Background="Transparent">
                 <DataGrid.Columns>
-                    <DataGridTextColumn  Header="Course ID" Width="150"   Binding="{Binding }"  />
-                    <DataGridTextColumn Header="Course Name" Width="170" Binding="{Binding }" />
-                    <DataGridTextColumn Header="Course Hour" Width="140" IsReadOnly="True" Binding="{Binding }"/>
-                    <DataGridTextColumn Header="Description" Width="*"  Binding="{Binding }"/>
+                    <DataGridTextColumn  Header="Course ID" Width="150"   Binding="{Binding course.courseID}"  />
+                    <DataGridTextColumn Header="Course Name" Width="170" Binding="{Binding course.course_Name}" />
+                    <DataGridTextColumn Header="Course Hour" Width="140" IsReadOnly="True" Binding="{Binding course.courseHour}"/>
+                    <DataGridTextColumn Header="Description" Width="*"  Binding="{Binding course.Description}"/>
                 </DataGrid.Columns>
             </DataGrid>
         </Grid>

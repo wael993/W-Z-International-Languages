@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:W_Z_International_Languages"
         mc:Ignorable="d"
      Title="W_Z International Languages" Height="1000" Width="1600"  WindowState="Maximized">
-    <Grid>
+    <Grid PreviewKeyDown="Grid_PreviewKeyDown">
         <Grid.Background>
             <ImageBrush ImageSource="F:\Arbeit\projekt\images ().jfif" />
         </Grid.Background>
