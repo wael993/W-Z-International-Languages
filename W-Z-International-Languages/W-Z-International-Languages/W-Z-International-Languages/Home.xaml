@@ -285,8 +285,8 @@
 
 
                 <Button x:Name="BT_StudentClear" Content="Clear" FontWeight="Bold" Foreground="White" Background="Orange" Grid.Row="4" Grid.Column="2" FontSize="22"  Height="40"  Margin="40 10 40 10" Click="BT_StudentClear_Click"  />
-                <Button x:Name="t_StudentUpdat" Content="Update" FontWeight="Bold" Foreground="White" Background="#50C878" Grid.Row="4" Grid.Column="3" FontSize="22"  Height="40"  Margin="40 10 40 10"/>
-                <Button x:Name="t_StudentDelet" Content="Delete" FontWeight="Bold" Foreground="White" Background="Red"  Grid.Row="4" Grid.Column="4"  Height="40"  FontSize="22"  Margin="40 10 40 10" />
+                <Button x:Name="Btn_StudentUpdat" Content="Update" FontWeight="Bold" Foreground="White" Background="#50C878" Grid.Row="4" Grid.Column="3" FontSize="22"  Height="40"  Margin="40 10 40 10" Click="Btn_StudentUpdat_Click"/>
+                <Button x:Name="Btn_StudentDelet" Content="Delete" FontWeight="Bold" Foreground="White" Background="Red"  Grid.Row="4" Grid.Column="4"  Height="40"  FontSize="22"  Margin="40 10 40 10" />
 
                 <!--<Label  Grid.Column="2" Grid.Row="5" x:Name="idden_St_ID"  Visibility="Hidden" Content="{Binding }"/>-->
 

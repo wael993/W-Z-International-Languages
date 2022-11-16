@@ -236,5 +236,11 @@ namespace W_Z_International_Languages
             TB_MangCourse_Description.Text = "";
 
         }
+
+        private void Btn_StudentUpdat_Click(object sender, RoutedEventArgs e)
+        {
+            ctx.SaveChanges();
+            MessageBox.Show("Änderung wird gespeichert.");
+        }
     }
 }
