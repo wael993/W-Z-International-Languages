@@ -30,7 +30,11 @@ namespace W_Z_International_Languages
             ctx.course.Load();
             CollectionView = CollectionViewSource.GetDefaultView(ctx.course.Local);
             Parents_Grid.DataContext = CollectionView;
-            Student_Registration.DataContext = ctx.student.ToList();
+            var student = ctx.student.ToList();
+            Student_Registration.DataContext = student;
+            View_Student.DataContext = student;
+            Student_Mang.DataContext = student;
+
         }
 
         //private void studenteinladen()
