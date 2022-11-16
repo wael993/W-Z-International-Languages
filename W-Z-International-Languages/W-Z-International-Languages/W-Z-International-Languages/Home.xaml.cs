@@ -27,12 +27,19 @@ namespace W_Z_International_Languages
         public Home()
         {
             InitializeComponent();
-            ctx.course_student.Load();
-            CollectionView = CollectionViewSource.GetDefaultView(ctx.course_student.Local);
+            ctx.course.Load();
+            CollectionView = CollectionViewSource.GetDefaultView(ctx.course.Local);
             Parents_Grid.DataContext = CollectionView;
+            Student_Registration.DataContext = ctx.student.ToList();
         }
 
+        //private void studenteinladen()
+        //{
+        //    ctx.student.Load();
+        //    CollectionView = CollectionViewSource.GetDefaultView(ctx.student.Local);
+        //    Student_Registration.DataContext = CollectionView;
 
+        //}
 
         private void MenuItem_GotFocus(object sender, RoutedEventArgs e)
         {
@@ -62,6 +69,7 @@ namespace W_Z_International_Languages
         }
         private void MenuItem_Registration_Click(object sender, RoutedEventArgs e)
         {
+            //studenteinladen();
             Student_Registration.Visibility = Visibility.Visible;
             Student_Mang.Visibility = Visibility.Hidden;
             New_Course.Visibility = Visibility.Hidden;
@@ -191,6 +199,38 @@ namespace W_Z_International_Languages
             }
         }
 
-   
+        private void Btn_New_Student_Clear_Click(object sender, RoutedEventArgs e)
+        {
+            TB_New_First_Name.Text = "";
+            TB_New_Address.Text = "";
+            TB_New_Phane.Text = "";
+            TB_New_Last_Name.Text = "";
+            New_birthday.SelectedDate = null;
+        }
+
+        private void BT_StudentClear_Click(object sender, RoutedEventArgs e)
+        {
+            TB_Mang_First_Name.Text = "";
+            TB_Mang_Address.Text = "";
+            TB_Mang_Last_Name.Text = "";
+            TB_Mang_Phane.Text = "";
+            Mang_birthday.SelectedDate = null;
+        }
+
+        private void Btn_NewCourse_Clear_Click(object sender, RoutedEventArgs e)
+        {
+            TB_NewCourse_Name.Text = "";
+            TB_NewCourse_Hour.Text = "";
+            TB_NewCourse_Description.Text = "";
+            
+        }
+
+        private void Btn_MangCourse_Clear_Click(object sender, RoutedEventArgs e)
+        {
+            TB_MangCourse_Name.Text = "";
+            TB_MangCourse_Hour.Text = "";
+            TB_MangCourse_Description.Text = "";
+
+        }
     }
 }
