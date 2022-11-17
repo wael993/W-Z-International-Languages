@@ -251,23 +251,30 @@ namespace W_Z_International_Languages
 
         private void Btn_StudentDelet_Click(object sender, RoutedEventArgs e)
         {
+            int Hidde_St_ID = Convert.ToInt32(Hidden_St_ID.Content);
 
             if (MessageBox.Show("Do you really want to delete the student?",
                       "Save file",
                       MessageBoxButton.YesNo,
                       MessageBoxImage.Question) == MessageBoxResult.Yes)
             {
-                int Hidde_St_ID = Convert.ToInt32(Hidden_St_ID.Content);
-                course_student n = ctx.course_student.Where(x => x.student_id == Hidde_St_ID).FirstOrDefault();
-                ctx.course_student.Remove(n);
-                student w = ctx.student.Where(x => x.student_id == Hidde_St_ID).FirstOrDefault();
-                ctx.student.Remove(w);
-                ctx.SaveChanges();
-                var list = ctx.student.ToList();
-                Student_Mang.DataContext = null;
-                Student_Mang.DataContext = list;
+                if (Hidde_St_ID== 1000)
+                {
+                    MessageBox.Show("you can't delete an admin !!");
+                }
+                else
+                {
+                    //int Hidde_St_ID = Convert.ToInt32(Hidden_St_ID.Content);
+                    course_student n = ctx.course_student.Where(x => x.student_id == Hidde_St_ID).FirstOrDefault();
+                    ctx.course_student.Remove(n);
+                    student w = ctx.student.Where(x => x.student_id == Hidde_St_ID).FirstOrDefault();
+                    ctx.student.Remove(w);
+                    ctx.SaveChanges();
+                    var list = ctx.student.ToList();
+                    Student_Mang.DataContext = null;
+                    Student_Mang.DataContext = list;
+                }
             }
-
 
 
         }
