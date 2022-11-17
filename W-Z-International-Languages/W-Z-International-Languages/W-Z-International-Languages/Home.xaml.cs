@@ -264,7 +264,6 @@ namespace W_Z_International_Languages
                 }
                 else
                 {
-                    //int Hidde_St_ID = Convert.ToInt32(Hidden_St_ID.Content);
                     course_student n = ctx.course_student.Where(x => x.student_id == Hidde_St_ID).FirstOrDefault();
                     ctx.course_student.Remove(n);
                     student w = ctx.student.Where(x => x.student_id == Hidde_St_ID).FirstOrDefault();
@@ -278,5 +277,52 @@ namespace W_Z_International_Languages
 
 
         }
-    }
+
+        private void Btn_New_Student_Add_Click(object sender, RoutedEventArgs e)
+        {
+            bool gen;
+            if (CB_New_Gender.Text== "Male")
+            {
+                gen = true;
+            }
+            else
+            {
+                gen = false;
+            }
+            if (TB_New_First_Name.Text == "" || TB_New_Last_Name.Text == "" || New_birthday.Text == "" ||
+               TB_New_Phane.Text == "" || TB_New_Address.Text == "")
+            {
+                MessageBox.Show("Please check your input.");
+            }
+            else
+            {
+                student student = new student
+                {
+                    FirstName = TB_New_First_Name.Text,
+                    LastName = TB_New_Last_Name.Text,
+                    Birthday = New_birthday.DisplayDate,
+                    Gender = gen,
+                    Phone = TB_New_Phane.Text,
+                    Adress = TB_New_Address.Text,
+
+                };
+                ctx.student.Add(student);
+                ctx.SaveChanges();
+                var Student = ctx.student.ToList();
+                Student_Registration.DataContext = null;
+                Student_Registration.DataContext = Student;
+
+                TB_New_First_Name.Text = "";
+                TB_New_Last_Name.Text = "";
+                New_birthday.Text = "";
+                CB_New_Gender.Text = "";
+                TB_New_Phane.Text = "";
+                TB_New_Address.Text = "";
+
+                MessageBox.Show("Neu Student wird hinzugefügt.");
+
+            }
+
+            }
+        }
 }
