@@ -211,7 +211,7 @@
         <!--Student Registration_Grid-->
 
         <!--Student Mang_Grid-->
-        <Grid x:Name="Student_Mang" Grid.Row="1" Visibility="Hidden" >
+        <Grid x:Name="Student_Mang" Grid.Row="1" Visibility="Visible" >
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
@@ -286,9 +286,9 @@
 
                 <Button x:Name="BT_StudentClear" Content="Clear" FontWeight="Bold" Foreground="White" Background="Orange" Grid.Row="4" Grid.Column="2" FontSize="22"  Height="40"  Margin="40 10 40 10" Click="BT_StudentClear_Click"  />
                 <Button x:Name="Btn_StudentUpdat" Content="Update" FontWeight="Bold" Foreground="White" Background="#50C878" Grid.Row="4" Grid.Column="3" FontSize="22"  Height="40"  Margin="40 10 40 10" Click="Btn_StudentUpdat_Click"/>
-                <Button x:Name="Btn_StudentDelet" Content="Delete" FontWeight="Bold" Foreground="White" Background="Red"  Grid.Row="4" Grid.Column="4"  Height="40"  FontSize="22"  Margin="40 10 40 10" />
+                <Button x:Name="Btn_StudentDelet" Content="Delete" FontWeight="Bold" Foreground="White" Background="Red"  Grid.Row="4" Grid.Column="4"  Height="40"  FontSize="22"  Margin="40 10 40 10" Click="Btn_StudentDelet_Click" />
 
-                <!--<Label  Grid.Column="2" Grid.Row="5" x:Name="idden_St_ID"  Visibility="Hidden" Content="{Binding }"/>-->
+                <Label  Grid.Column="0" Grid.Row="2" x:Name="Hidden_St_ID" Foreground="White" Visibility="Visible" Content="{Binding student_id}"/>
 
             </Grid>
         </Grid>
@@ -454,7 +454,7 @@
 
 
                 <Button x:Name="Btn_MangCourse_Clear" Content="Clear" FontWeight="Bold" Foreground="White" Background="Orange" Grid.Row="3" Grid.Column="3" FontSize="22"  Height="40"  Margin="40 10 40 10" Click="Btn_MangCourse_Clear_Click"  />
-                <Button x:Name="Btn_MangCourse_Updat" Content="Update" FontWeight="Bold" Foreground="White" Background="#50C878" Grid.Row="4" Grid.Column="3" FontSize="22"  Height="40"  Margin="40 10 40 10"/>
+                <Button x:Name="Btn_MangCourse_Updat" Content="Update" FontWeight="Bold" Foreground="White" Background="#50C878" Grid.Row="4" Grid.Column="3" FontSize="22"  Height="40"  Margin="40 10 40 10" Click="Btn_MangCourse_Updat_Click"/>
                 <Button x:Name="Btn_MangCourse_Delete" Content="Delete" FontWeight="Bold" Foreground="White" Background="Red"  Grid.Row="4" Grid.Column="4"  Height="40"  FontSize="22"  Margin="40 10 40 10" />
 
                 <!--<Label  Grid.Column="2" Grid.Row="5" x:Name="iddsen_St_ID"  Visibility="Hidden" Content="{Binding }"/>-->
