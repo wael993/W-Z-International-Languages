@@ -58,6 +58,7 @@ namespace W_Z_International_Languages
             Mang_Course.Visibility = Visibility.Hidden;
             View_Student.Visibility = Visibility.Hidden;
             View_Course.Visibility = Visibility.Hidden;
+            Student_Information.Visibility = Visibility.Hidden;
 
         }
         private void MenuItem_view_Student_Click(object sender, RoutedEventArgs e)
@@ -68,6 +69,7 @@ namespace W_Z_International_Languages
             New_Course.Visibility = Visibility.Hidden;
             Mang_Course.Visibility = Visibility.Hidden;
             View_Course.Visibility = Visibility.Hidden;
+            Student_Information.Visibility = Visibility.Hidden;
 
 
         }
@@ -80,6 +82,7 @@ namespace W_Z_International_Languages
             Mang_Course.Visibility = Visibility.Hidden;
             View_Student.Visibility = Visibility.Hidden;
             View_Course.Visibility = Visibility.Hidden;
+            Student_Information.Visibility = Visibility.Hidden;
 
         }
 
@@ -91,6 +94,7 @@ namespace W_Z_International_Languages
             Mang_Course.Visibility = Visibility.Hidden;
             View_Student.Visibility = Visibility.Hidden;
             View_Course.Visibility = Visibility.Hidden;
+            Student_Information.Visibility = Visibility.Hidden;
 
         }
         private void View_Course_Click(object sender, RoutedEventArgs e)
@@ -101,6 +105,8 @@ namespace W_Z_International_Languages
             New_Course.Visibility = Visibility.Hidden;
             Mang_Course.Visibility = Visibility.Hidden;
             View_Student.Visibility = Visibility.Hidden;
+            Student_Information.Visibility = Visibility.Hidden;
+
         }
         private void New_Course_Click(object sender, RoutedEventArgs e)
         {
@@ -110,6 +116,7 @@ namespace W_Z_International_Languages
             Mang_Course.Visibility = Visibility.Hidden;
             View_Student.Visibility = Visibility.Hidden;
             View_Course.Visibility = Visibility.Hidden;
+            Student_Information.Visibility = Visibility.Hidden;
 
         }
 
@@ -121,6 +128,9 @@ namespace W_Z_International_Languages
             Student_Registration.Visibility = Visibility.Hidden;
             View_Student.Visibility = Visibility.Hidden;
             View_Course.Visibility = Visibility.Hidden;
+            Student_Information.Visibility = Visibility.Hidden;
+            Student_Information.Visibility = Visibility.Hidden;
+
         }
 
         private void tbx_View_Student_search_GotFocus(object sender, RoutedEventArgs e)
@@ -324,5 +334,21 @@ namespace W_Z_International_Languages
             }
 
             }
+
+        private void DG_Student_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            int Hidde_St_ID = Convert.ToInt32(Label_student_ID.Content);
+            student w = ctx.student.Where(x => x.student_id == Hidde_St_ID).FirstOrDefault();
+            Student_Information.DataContext = w;
+
+
+            Student_Information.Visibility = Visibility.Visible;
+            Student_Mang.Visibility = Visibility.Hidden;
+            Student_Registration.Visibility = Visibility.Hidden;
+            New_Course.Visibility = Visibility.Hidden;
+            Mang_Course.Visibility = Visibility.Hidden;
+            View_Student.Visibility = Visibility.Hidden;
+            View_Course.Visibility = Visibility.Hidden;
         }
+    }
 }

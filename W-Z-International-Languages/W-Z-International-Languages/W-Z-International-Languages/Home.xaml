@@ -96,8 +96,8 @@
             </Grid.RowDefinitions>
             <TextBlock Text="View Student " Height="75" TextAlignment="Center" Padding="15" Grid.Row="0" Background="#2D8395" Foreground="White" FontSize="30" FontWeight="Bold"   />
             <TextBox  Grid.Row="1" x:Name="tbx_View_Student_search" HorizontalAlignment="Right" Height="32" Width="250" Foreground="Wheat" Text="Search" FontSize="22" HorizontalContentAlignment="Center" Background="Transparent" GotFocus="tbx_View_Student_search_GotFocus" />
-
-            <DataGrid
+            <Label x:Name="Label_student_ID" Content="{Binding student_id}" Grid.Row="1" HorizontalAlignment="Left"/>
+            <DataGrid MouseDoubleClick="DG_Student_MouseDoubleClick"
                       x:Name="DG_Student"
                       Grid.Row="2" 
                       FontSize="19"
@@ -123,7 +123,7 @@
         <!--Student_View_Grid-->
 
         <!--Student Registration_Grid-->
-        <Grid x:Name="Student_Registration" Grid.Row="1" Visibility="Visible" >
+        <Grid x:Name="Student_Registration" Grid.Row="1" Visibility="Hidden" >
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
@@ -462,6 +462,77 @@
             </Grid>
         </Grid>
         <!--Mang_Course_Grid-->
+        <Grid x:Name="Student_Information" Grid.Row="1" Visibility="Visible" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock Text="Student Information" Height="75" TextAlignment="Center" Padding="15" Grid.Row="0" Background="#2D8395" Foreground="White" FontSize="30" FontWeight="Bold"   />
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+      
+    
+                </Grid.RowDefinitions>
 
-    </Grid>
+
+                <DataGrid Grid.Row="0" 
+                      FontSize="19"
+                      ItemsSource="{Binding}"
+                      AutoGenerateColumns="False"               
+                      IsReadOnly="False"
+                      CanUserAddRows="False"
+                      IsSynchronizedWithCurrentItem="True"
+                      RowHeight="35"
+                      Background="Transparent">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Student ID" Width="110" IsReadOnly="True" Binding="{Binding student_id }"  />
+                        <DataGridTextColumn Header="First Name" Width="110" Binding="{Binding FirstName}" />
+                        <DataGridTextColumn Header="Last Name " Width="110"  Binding="{Binding LastName}"/>
+                        <DataGridTextColumn Header="Gender" Width="110" Binding="{Binding Gender}"/>
+                        <DataGridTextColumn Header="Birthday" Width="110" Binding="{Binding Birthday}"/>
+                        <DataGridTextColumn Header="Phane" Width="110" Binding="{Binding Phone}"/>
+                        <DataGridTextColumn Header="Address" Width="*" Binding="{Binding Adress}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+
+
+
+
+
+                <ListView Grid.Row="2"
+                  x:Name="Student_Information_" 
+                  IsSynchronizedWithCurrentItem="True"
+                  ItemsSource="{Binding }" SelectedIndex="1" >
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock>                   
+                                <Run Text="{Binding student_id}"/>
+                                <LineBreak/>
+                                <Run Text="{Binding FirstName}"/>
+                                <LineBreak/>
+                                <Run Text="{Binding LastName}"/>
+                                <LineBreak/>
+                                <Run Text="{Binding Gender}"/>
+                                <LineBreak/>
+                                <Run Text="{Binding Birthday}"/>
+                                <LineBreak/>
+                                <Run Text="{Binding Phone}"/>
+                                <LineBreak/>
+                                <Run Text="{Binding Adress}"/>
+                            </TextBlock>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+
+
+
+
+
+
+        </Grid>
+        </Grid>
 </Window>
