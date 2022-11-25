@@ -49,11 +49,11 @@ namespace W_Z_International_Languages
                             home.Show();
                                 Close();
                                 return;
-                    }
+                        }
 
 
 
-                        MessageBox.Show("Benutzername oder Passwort falsch!");
+                        MessageBox.Show("username or password is incorrect!");
                         UserName.Text = "";
                         Pass.Text = "";
 
