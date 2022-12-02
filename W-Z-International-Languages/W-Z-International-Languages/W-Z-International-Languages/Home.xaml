@@ -103,19 +103,19 @@
                       FontSize="19"
                       ItemsSource="{Binding}"
                       AutoGenerateColumns="False"               
-                      IsReadOnly="False"
+                      IsReadOnly="True"
                       CanUserAddRows="False"
                       IsSynchronizedWithCurrentItem="True"
                       RowHeight="35"
                       Background="Transparent">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Student ID" Width="110" IsReadOnly="True" Binding="{Binding student_id }"  />
-                    <DataGridTextColumn Header="First Name" Width="110" Binding="{Binding FirstName}" />
+                    <DataGridTextColumn Header="Student ID" Width="110"  Binding="{Binding student_id }"  />
+                    <DataGridTextColumn Header="First Name" Width="110"  Binding="{Binding FirstName}" />
                     <DataGridTextColumn Header="Last Name " Width="110"  Binding="{Binding LastName}"/>
-                    <DataGridTextColumn Header="Gender" Width="110" Binding="{Binding Gender}"/>
-                    <DataGridTextColumn Header="Birthday" Width="110" Binding="{Binding Birthday}"/>
-                    <DataGridTextColumn Header="Phane" Width="110" Binding="{Binding Phone}"/>
-                    <DataGridTextColumn Header="Address" Width="*" Binding="{Binding Adress}"/>
+                    <DataGridTextColumn Header="Gender"     Width="110"  Binding="{Binding Gender}"/>
+                    <DataGridTextColumn Header="Birthday"   Width="110"  Binding="{Binding Birthday}"/>
+                    <DataGridTextColumn Header="Phane"      Width="110"  Binding="{Binding Phone}"/>
+                    <DataGridTextColumn Header="Address"    Width="*"    Binding="{Binding Adress}"/>
 
                 </DataGrid.Columns>
             </DataGrid>
@@ -138,20 +138,20 @@
                       FontSize="19"
                       ItemsSource="{Binding}"
                       AutoGenerateColumns="False"               
-                      IsReadOnly="False"
+                      IsReadOnly="True"
                       CanUserAddRows="False"
                       IsSynchronizedWithCurrentItem="True"
                       RowHeight="35"
                       Background="Transparent">
                 <DataGrid.Columns>
 
-                    <DataGridTextColumn Header="Student ID" Width="110" IsReadOnly="True" Binding="{Binding student_id }"  />
-                    <DataGridTextColumn Header="First Name" Width="110" Binding="{Binding FirstName}" />
+                    <DataGridTextColumn Header="Student ID" Width="110"  Binding="{Binding student_id }"  />
+                    <DataGridTextColumn Header="First Name" Width="110"  Binding="{Binding FirstName}" />
                     <DataGridTextColumn Header="Last Name " Width="110"  Binding="{Binding LastName}"/>
-                    <DataGridTextColumn Header="Gender" Width="110" Binding="{Binding Gender}"/>
-                    <DataGridTextColumn Header="Birthday" Width="110" Binding="{Binding Birthday}"/>
-                    <DataGridTextColumn Header="Phane" Width="110" Binding="{Binding Phone}"/>
-                    <DataGridTextColumn Header="Address" Width="*" Binding="{Binding Adress}"/>
+                    <DataGridTextColumn Header="Gender"     Width="110"  Binding="{Binding Gender}"/>
+                    <DataGridTextColumn Header="Birthday"   Width="110"  Binding="{Binding Birthday}"/>
+                    <DataGridTextColumn Header="Phane"      Width="110"  Binding="{Binding Phone}"/>
+                    <DataGridTextColumn Header="Address"    Width="*"    Binding="{Binding Adress}"/>
 
 
 
@@ -225,20 +225,20 @@
                       FontSize="19"
                       ItemsSource="{Binding }"
                       AutoGenerateColumns="False"               
-                      IsReadOnly="False"
+                      IsReadOnly="True"
                       CanUserAddRows="False"
                       IsSynchronizedWithCurrentItem="True"
                       RowHeight="35"
                       Background="Transparent">
 
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Student ID" Width="110" IsReadOnly="True" Binding="{Binding student_id }"  />
-                    <DataGridTextColumn Header="First Name" Width="110" Binding="{Binding FirstName}" />
+                    <DataGridTextColumn Header="Student ID" Width="110"  Binding="{Binding student_id }"  />
+                    <DataGridTextColumn Header="First Name" Width="110"  Binding="{Binding FirstName}" />
                     <DataGridTextColumn Header="Last Name " Width="110"  Binding="{Binding LastName}"/>
-                    <DataGridTextColumn Header="Gender" Width="110" Binding="{Binding Gender}"/>
-                    <DataGridTextColumn Header="Birthday" Width="110" Binding="{Binding Birthday}"/>
-                    <DataGridTextColumn Header="Phane" Width="110" Binding="{Binding Phone}"/>
-                    <DataGridTextColumn Header="Address" Width="*" Binding="{Binding Adress}"/>
+                    <DataGridTextColumn Header="Gender"     Width="110"  Binding="{Binding Gender}"/>
+                    <DataGridTextColumn Header="Birthday"   Width="110"  Binding="{Binding Birthday}"/>
+                    <DataGridTextColumn Header="Phane"      Width="110"  Binding="{Binding Phone}"/>
+                    <DataGridTextColumn Header="Address"    Width="*"    Binding="{Binding Adress}"/>
                 </DataGrid.Columns>
             </DataGrid>
 
@@ -261,27 +261,27 @@
                 </Grid.RowDefinitions>
 
                 <Label Content="First Name: " Grid.Row="0" Grid.Column="0" FontSize="18" Margin="0 10 50 0" Foreground="Snow"/>
-                <TextBox Background="Transparent" x:Name="TB_Mang_First_Name" Grid.Row="0" Grid.Column="1" FontSize="22"  Margin="0 10 0 0" Foreground="Snow"/>
+                <TextBox Background="Transparent" x:Name="TB_Mang_First_Name" Text="{Binding FirstName}"  Grid.Row="0" Grid.Column="1" FontSize="22"  Margin="0 10 0 0" Foreground="Snow"/>
 
                 <Label Content="Last Name: " Grid.Row="0" Grid.Column="2" FontSize="18" Margin="0 10 50 0" HorizontalAlignment="Right" Foreground="Snow"/>
-                <TextBox Background="Transparent" x:Name="TB_Mang_Last_Name" Grid.Row="0" Grid.Column="3" FontSize="22" Margin="0 10 0 0" Foreground="Snow"/>
+                <TextBox Background="Transparent" x:Name="TB_Mang_Last_Name" Text="{Binding LastName}" Grid.Row="0" Grid.Column="3" FontSize="22" Margin="0 10 0 0" Foreground="Snow"/>
 
                
                 <Label  Content="Birthday:" Grid.Row="1" Grid.Column="2" FontSize="18" Margin="0 10 50 0" HorizontalAlignment="Right" Foreground="Snow"/>
-                <DatePicker x:Name="Mang_birthday" Grid.Row="1" Grid.Column="3" FontSize="22" Margin="0 10 0 10"></DatePicker>
+                <DatePicker x:Name="Mang_birthday" Text="{Binding Birthday}" Grid.Row="1" Grid.Column="3" FontSize="22" Margin="0 10 0 10"></DatePicker>
 
                 <Label Content="Gender " Grid.Row="2" Grid.Column="0" FontSize="18" Margin="0 10 50 0" Foreground="Snow"/>
-                <ComboBox Background="Transparent" x:Name="CB_Mang_Gender" Text="Female" FontSize="22" Margin="0 10 0 0" Grid.Row="2" Grid.Column="1"  IsEditable="true"
+                <ComboBox Background="Transparent" x:Name="CB_Mang_Gender"  Text="{Binding Gender}" FontSize="22" Margin="0 10 0 0" Grid.Row="2" Grid.Column="1"  IsEditable="true"
                      IsReadOnly="true"  >
                     <ComboBoxItem>Male</ComboBoxItem>
                     <ComboBoxItem>Female</ComboBoxItem>
                 </ComboBox>
 
                 <Label Content="Address: " Grid.Row="3" Grid.Column="0" FontSize="18" Margin="0 10 50 0" Foreground="Snow"/>
-                <TextBox Background="Transparent" x:Name="TB_Mang_Address" AcceptsReturn="True" Grid.Row="3" Grid.RowSpan="2" Grid.Column="1"  FontSize="22"  Margin="0 10 0 10" Foreground="Snow"/>
+                <TextBox Background="Transparent" x:Name="TB_Mang_Address" Text="{Binding Adress}" AcceptsReturn="True" Grid.Row="3" Grid.RowSpan="2" Grid.Column="1"  FontSize="22"  Margin="0 10 0 10" Foreground="Snow"/>
 
                 <Label Content="Phane:" Grid.Row="2" Grid.Column="2" FontSize="18" Margin="0 10 50 0" HorizontalAlignment="Right" Foreground="Snow"/>
-                <TextBox Background="Transparent" x:Name="TB_Mang_Phane" Grid.Row="2" Grid.Column="3" FontSize="22" Margin="0 10 0 0" Foreground="Snow"/>
+                <TextBox Background="Transparent" x:Name="TB_Mang_Phane" Text="{Binding Phone}" Grid.Row="2" Grid.Column="3" FontSize="22" Margin="0 10 0 0" Foreground="Snow"/>
 
 
                 <Button x:Name="BT_StudentClear" Content="Clear" FontWeight="Bold" Foreground="White" Background="Orange" Grid.Row="4" Grid.Column="2" FontSize="22"  Height="40"  Margin="40 10 40 10" Click="BT_StudentClear_Click"  />
@@ -312,16 +312,16 @@
                       FontSize="19"
                       ItemsSource="{Binding}"
                       AutoGenerateColumns="False"               
-                      IsReadOnly="False"
+                      IsReadOnly="True"
                       CanUserAddRows="False"
                       IsSynchronizedWithCurrentItem="True"
                       RowHeight="35"
                       Background="Transparent">
                 <DataGrid.Columns>
-                    <DataGridTextColumn  Header="Course ID" Width="150"  IsReadOnly="True" Binding="{Binding courseID}"  />
-                    <DataGridTextColumn Header="Course Name" Width="170" Binding="{Binding course_Name}" />
+                    <DataGridTextColumn  Header="Course ID"  Width="150"  Binding="{Binding courseID}"  />
+                    <DataGridTextColumn Header="Course Name" Width="170"  Binding="{Binding course_Name}" />
                     <DataGridTextColumn Header="Course Hour" Width="140"  Binding="{Binding courseHour}"/>
-                    <DataGridTextColumn Header="Description" Width="*"  Binding="{Binding Description}"/>
+                    <DataGridTextColumn Header="Description" Width="*"    Binding="{Binding Description}"/>
                 </DataGrid.Columns>
             </DataGrid>
         </Grid>
@@ -344,16 +344,16 @@
                       FontSize="19"
                       ItemsSource="{Binding}"
                       AutoGenerateColumns="False"               
-                      IsReadOnly="False"
+                      IsReadOnly="True"
                       CanUserAddRows="False"
                       IsSynchronizedWithCurrentItem="True"
                       RowHeight="35"
                       Background="Transparent">
                 <DataGrid.Columns>
-                    <DataGridTextColumn  Header="Course ID" Width="150" IsReadOnly="True"  Binding="{Binding courseID}"  />
-                    <DataGridTextColumn Header="Course Name" Width="170" Binding="{Binding course_Name}" />
+                    <DataGridTextColumn  Header="Course ID"  Width="150"  Binding="{Binding courseID}"  />
+                    <DataGridTextColumn Header="Course Name" Width="170"  Binding="{Binding course_Name}" />
                     <DataGridTextColumn Header="Course Hour" Width="140"  Binding="{Binding courseHour}"/>
-                    <DataGridTextColumn Header="Description" Width="*"  Binding="{Binding Description}"/>
+                    <DataGridTextColumn Header="Description" Width="*"    Binding="{Binding Description}"/>
 
 
 
@@ -412,16 +412,16 @@
                       FontSize="19"
                       ItemsSource="{Binding}"
                       AutoGenerateColumns="False"               
-                      IsReadOnly="False"
+                      IsReadOnly="True"
                       CanUserAddRows="False"
                       IsSynchronizedWithCurrentItem="True"
                       RowHeight="35"
                       Background="Transparent">
                 <DataGrid.Columns>
-                    <DataGridTextColumn  Header="Course ID" Width="150" IsReadOnly="True"  Binding="{Binding courseID}"  />
-                    <DataGridTextColumn Header="Course Name" Width="170" Binding="{Binding course_Name}" />
+                    <DataGridTextColumn  Header="Course ID"  Width="150"  Binding="{Binding courseID}"  />
+                    <DataGridTextColumn Header="Course Name" Width="170"  Binding="{Binding course_Name}" />
                     <DataGridTextColumn Header="Course Hour" Width="140"  Binding="{Binding courseHour}"/>
-                    <DataGridTextColumn Header="Description" Width="*"  Binding="{Binding Description}"/>
+                    <DataGridTextColumn Header="Description" Width="*"    Binding="{Binding Description}"/>
                 </DataGrid.Columns>
             </DataGrid>
 
@@ -444,13 +444,13 @@
                 </Grid.RowDefinitions>
 
                 <Label Content="Course Name:" Grid.Row="0" Grid.Column="0"  FontSize="18" Margin="0 10 50 0" Foreground="#2D8395"/>
-                <TextBox Background="Snow" x:Name="TB_MangCourse_Name" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" FontSize="22"  Margin="0 10 0 0" Foreground="Black"/>
+                <TextBox Background="Snow" x:Name="TB_MangCourse_Name" Text="{Binding course_Name}" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" FontSize="22"  Margin="0 10 0 0" Foreground="Black"/>
 
                 <Label Content="Hour: " Grid.Row="1" Grid.Column="0"  FontSize="18" Margin="0 10 50 0" Foreground="#2D8395"/>
-                <TextBox Background="Snow" x:Name="TB_MangCourse_Hour" Grid.Row="1" Grid.Column="1" FontSize="22" Margin="0 10 180 0" Foreground="Black"/>
+                <TextBox Background="Snow" x:Name="TB_MangCourse_Hour" Text="{Binding courseHour}" Grid.Row="1" Grid.Column="1" FontSize="22" Margin="0 10 180 0" Foreground="Black"/>
 
                 <Label Content="Description: " Grid.Row="3" Grid.Column="0" FontSize="18" Margin="0 10 50 0" Foreground="#2D8395"/>
-                <TextBox Background="Snow" x:Name="TB_MangCourse_Description" Grid.RowSpan="2" Grid.Row="3" Grid.ColumnSpan="2" Grid.Column="1" FontSize="22"  Margin="0 10 0 10" Foreground="Black"/>
+                <TextBox Background="Snow" x:Name="TB_MangCourse_Description" Text="{Binding Description}" Grid.RowSpan="2" Grid.Row="3" Grid.ColumnSpan="2" Grid.Column="1" FontSize="22"  Margin="0 10 0 10" Foreground="Black"/>
 
 
                 <Button x:Name="Btn_MangCourse_Clear" Content="Clear" FontWeight="Bold" Foreground="White" Background="Orange" Grid.Row="3" Grid.Column="3" FontSize="22"  Height="40"  Margin="40 10 40 10" Click="Btn_MangCourse_Clear_Click"  />
