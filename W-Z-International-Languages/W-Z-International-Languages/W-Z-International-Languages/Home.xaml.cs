@@ -63,6 +63,10 @@ namespace W_Z_International_Languages
         }
         private void MenuItem_view_Student_Click(object sender, RoutedEventArgs e)
         {
+            ctx.student.Load();
+            CollectionView = CollectionViewSource.GetDefaultView(ctx.student.Local);
+            View_Student.DataContext = CollectionView;
+
             View_Student.Visibility = Visibility.Visible;
             Student_Registration.Visibility = Visibility.Hidden;
             Student_Mang.Visibility = Visibility.Hidden;
@@ -75,7 +79,10 @@ namespace W_Z_International_Languages
         }
         private void MenuItem_Registration_Click(object sender, RoutedEventArgs e)
         {
-            //studenteinladen();
+            ctx.student.Load();
+            CollectionView = CollectionViewSource.GetDefaultView(ctx.student.Local);
+             Student_Registration.DataContext = CollectionView;
+
             Student_Registration.Visibility = Visibility.Visible;
             Student_Mang.Visibility = Visibility.Hidden;
             New_Course.Visibility = Visibility.Hidden;
@@ -88,6 +95,10 @@ namespace W_Z_International_Languages
 
         private void MenuItem_Manage_Student_Click(object sender, RoutedEventArgs e)
         {
+            ctx.student.Load();
+            CollectionView = CollectionViewSource.GetDefaultView(ctx.student.Local);
+            Student_Mang.DataContext = CollectionView;
+
             Student_Mang.Visibility = Visibility.Visible;
             Student_Registration.Visibility = Visibility.Hidden;
             New_Course.Visibility = Visibility.Hidden;
@@ -335,20 +346,53 @@ namespace W_Z_International_Languages
 
             }
 
-        private void DG_Student_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        private void tbx_Student_Registration_search_TextChanged(object sender, TextChangedEventArgs e)
         {
-            int Hidde_St_ID = Convert.ToInt32(Label_student_ID.Content);
-            student w = ctx.student.Where(x => x.student_id == Hidde_St_ID).FirstOrDefault();
-            Student_Information.DataContext = w;
+            string searchStr = tbx_Student_Registration_search.Text.ToLower();
+            var list = CollectionView.Cast<student>();
+            student q = list.FirstOrDefault(x => x.FirstName.ToLower().Contains(searchStr)
+                        || x.LastName.ToLower().Contains(searchStr)
+                        || x.Birthday.ToString().Contains(searchStr));
+            CollectionView.MoveCurrentTo(q);
 
-
-            Student_Information.Visibility = Visibility.Visible;
-            Student_Mang.Visibility = Visibility.Hidden;
-            Student_Registration.Visibility = Visibility.Hidden;
-            New_Course.Visibility = Visibility.Hidden;
-            Mang_Course.Visibility = Visibility.Hidden;
-            View_Student.Visibility = Visibility.Hidden;
-            View_Course.Visibility = Visibility.Hidden;
         }
+
+        private void tbx_Student_Mang_Search_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string searchStr = tbx_Student_Mang_Search.Text.ToLower();
+
+            var list = CollectionView.Cast<student>();
+            student n = list.FirstOrDefault(x => x.FirstName.ToLower().Contains(searchStr)
+                        || x.LastName.ToLower().Contains(searchStr)
+                        || x.Birthday.ToString().Contains(searchStr));
+            CollectionView.MoveCurrentTo(n);
+
+        }
+
+        private void tbx_View_Student_search_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string searchStr = tbx_View_Student_search.Text.ToLower();
+            var list = CollectionView.Cast<student>();
+            student w = list.FirstOrDefault(x =>x.FirstName.ToLower().Contains(searchStr)
+                                            ||  x.LastName.ToLower().Contains(searchStr)
+                                            ||  x.Birthday.ToString().Contains(searchStr));
+            CollectionView.MoveCurrentTo(w);
+        }
+
+        //private void DG_Student_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        //{
+        //    int Hidde_St_ID = Convert.ToInt32(Label_student_ID.Content);
+        //    student w = ctx.student.Where(x => x.student_id == Hidde_St_ID).FirstOrDefault();
+        //    Student_Information.DataContext = w;
+
+
+        //    Student_Information.Visibility = Visibility.Visible;
+        //    Student_Mang.Visibility = Visibility.Hidden;
+        //    Student_Registration.Visibility = Visibility.Hidden;
+        //    New_Course.Visibility = Visibility.Hidden;
+        //    Mang_Course.Visibility = Visibility.Hidden;
+        //    View_Student.Visibility = Visibility.Hidden;
+        //    View_Course.Visibility = Visibility.Hidden;
+        //}
     }
 }

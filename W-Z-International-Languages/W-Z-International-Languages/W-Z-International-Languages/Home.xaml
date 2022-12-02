@@ -95,9 +95,12 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
             <TextBlock Text="View Student " Height="75" TextAlignment="Center" Padding="15" Grid.Row="0" Background="#2D8395" Foreground="White" FontSize="30" FontWeight="Bold"   />
-            <TextBox  Grid.Row="1" x:Name="tbx_View_Student_search" HorizontalAlignment="Right" Height="32" Width="250" Foreground="Wheat" Text="Search" FontSize="22" HorizontalContentAlignment="Center" Background="Transparent" GotFocus="tbx_View_Student_search_GotFocus" />
-            <Label x:Name="Label_student_ID" Content="{Binding student_id}" Grid.Row="1" HorizontalAlignment="Left"/>
-            <DataGrid MouseDoubleClick="DG_Student_MouseDoubleClick"
+            <WrapPanel  Grid.Row="1" HorizontalAlignment="Right" Height="32"  >
+                <TextBlock Text="Search" Foreground="Wheat"  FontSize="22"  />
+                <TextBox  Grid.Row="1" x:Name="tbx_View_Student_search"  Width="250" Foreground="Wheat"  FontSize="22" HorizontalContentAlignment="Center" Background="Transparent" GotFocus="tbx_View_Student_search_GotFocus" TextChanged="tbx_View_Student_search_TextChanged" />
+            </WrapPanel>
+                <Label x:Name="Label_student_ID" Content="{Binding student_id}" Grid.Row="1" HorizontalAlignment="Left"/>
+            <DataGrid 
                       x:Name="DG_Student"
                       Grid.Row="2" 
                       FontSize="19"
@@ -108,6 +111,7 @@
                       IsSynchronizedWithCurrentItem="True"
                       RowHeight="35"
                       Background="Transparent">
+                <!--MouseDoubleClick="DG_Student_MouseDoubleClick"-->
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Student ID" Width="110"  Binding="{Binding student_id }"  />
                     <DataGridTextColumn Header="First Name" Width="110"  Binding="{Binding FirstName}" />
@@ -131,8 +135,10 @@
                 <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
             <TextBlock Text="New Student " Height="75" TextAlignment="Center" Padding="15" Grid.Row="0" Background="#2D8395" Foreground="White" FontSize="30" FontWeight="Bold"   />
-            <TextBox  Grid.Row="1" x:Name="tbx_Student_Registration_search" HorizontalAlignment="Right" Height="32" Width="250" Foreground="Wheat" Text="Search" FontSize="22" HorizontalContentAlignment="Center" Background="Transparent" GotFocus="tbx_Student_Registration_search_GotFocus" />
-
+            <WrapPanel  Grid.Row="1" HorizontalAlignment="Right" Height="32"  >
+                <TextBlock Text="Search" Foreground="Wheat"  FontSize="22"  />
+            <TextBox  x:Name="tbx_Student_Registration_search" Width="250" Foreground="Wheat"  FontSize="22" HorizontalContentAlignment="Center" Background="Transparent" GotFocus="tbx_Student_Registration_search_GotFocus" TextChanged="tbx_Student_Registration_search_TextChanged" />
+            </WrapPanel>
             <DataGrid 
                       Grid.Row="2" 
                       FontSize="19"
@@ -219,8 +225,11 @@
                 <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
             <TextBlock Text="Students Manage" Height="75" TextAlignment="Center" Padding="15" Grid.Row="0" Background="#2D8395" Foreground="White" FontSize="30" FontWeight="Bold"   />
-            <TextBox  Grid.Row="1" x:Name="tbx_Student_Mang_Search" HorizontalAlignment="Right" Height="32" Width="250" Foreground="Wheat" Text="Search" FontSize="22" HorizontalContentAlignment="Center" Background="Transparent" GotFocus="tbx_Student_Mang_Search_GotFocus" />
-
+            <WrapPanel  Grid.Row="1" HorizontalAlignment="Right" Height="32"  >
+                <TextBlock Text="Search" Foreground="Wheat"  FontSize="22"  />
+       
+            <TextBox x:Name="tbx_Student_Mang_Search"  Height="32" Width="250" Foreground="Wheat" FontSize="22" HorizontalContentAlignment="Center" Background="Transparent" GotFocus="tbx_Student_Mang_Search_GotFocus" TextChanged="tbx_Student_Mang_Search_TextChanged" />
+     </WrapPanel>
             <DataGrid Grid.Row="2" 
                       FontSize="19"
                       ItemsSource="{Binding }"
