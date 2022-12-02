@@ -477,7 +477,7 @@
                 </Grid.RowDefinitions>
 
 
-                <DataGrid Grid.Row="0" 
+                <!--<DataGrid Grid.Row="0" 
                       FontSize="19"
                       ItemsSource="{Binding}"
                       AutoGenerateColumns="False"               
@@ -495,13 +495,13 @@
                         <DataGridTextColumn Header="Phane" Width="110" Binding="{Binding Phone}"/>
                         <DataGridTextColumn Header="Address" Width="*" Binding="{Binding Adress}"/>
                     </DataGrid.Columns>
-                </DataGrid>
+                </DataGrid>-->
 
 
 
 
 
-                <ListView Grid.Row="2"
+                <!--<ListView Grid.Row="2"
                   x:Name="Student_Information_" 
                   IsSynchronizedWithCurrentItem="True"
                   ItemsSource="{Binding }" SelectedIndex="1" >
@@ -525,7 +525,7 @@
                             </TextBlock>
                         </DataTemplate>
                     </ListView.ItemTemplate>
-                </ListView>
+                </ListView>-->
             </Grid>
 
 
