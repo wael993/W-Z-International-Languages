@@ -10,7 +10,7 @@
 
     <Grid x:Name="Parents_Grid">
         <Grid.Background>
-            <ImageBrush ImageSource="F:\Arbeit\projekt\images ().jfif" />
+            <ImageBrush ImageSource="Image\background.png" />
         </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -27,7 +27,7 @@
             <MenuItem Foreground="#B8C4C6"  Padding="12" Click="Dashboard_MenuItem_Click" >
                 <MenuItem.Header >
                     <WrapPanel Background="#2D8395">
-                        <Image Height="60" Width="60"  Source="F:\Arbeit\projekt\images (2).png"></Image>
+                        <Image Height="60" Width="60"  Source="Image\images (2).png"></Image>
                         <ContentPresenter  Content="Dashboard" />
                     </WrapPanel>
                 </MenuItem.Header>
@@ -36,7 +36,7 @@
             <MenuItem Foreground="#B8C4C6"  Padding="12"  >
                 <MenuItem.Header>
                     <WrapPanel Background="#2D8395" >
-                        <Image Height="60" Width="60"  Source="F:\Arbeit\projekt\Student_Menu.png"></Image>
+                        <Image Height="60" Width="60"  Source="Image\Student_Menu.png"></Image>
                         <ContentPresenter  Content="Student"/>
                     </WrapPanel>
                 </MenuItem.Header>
@@ -49,7 +49,7 @@
             <MenuItem Foreground="#B8C4C6"  Padding="12" >
                 <MenuItem.Header>
                     <WrapPanel Background="#2D8395" >
-                        <Image Height="60" Width="60"  Source="F:\Arbeit\projekt\images (2).png"></Image>
+                        <Image Height="60" Width="60"  Source="Image\images (2).png"></Image>
                         <ContentPresenter  Content="Course" />
                     </WrapPanel>
                 </MenuItem.Header>
@@ -62,7 +62,7 @@
             <MenuItem Foreground="#B8C4C6"  Padding="12" >
                 <MenuItem.Header>
                     <WrapPanel Background="#2D8395" >
-                        <Image Height="60" Width="60"  Source="F:\Arbeit\projekt\images (2).png"></Image>
+                        <Image Height="60" Width="60"  Source="Image\images (2).png"></Image>
                         <ContentPresenter  Content="Why us ?"/>
                     </WrapPanel>
                 </MenuItem.Header>
@@ -75,7 +75,7 @@
             <MenuItem Foreground="#B8C4C6"  Padding="12" GotFocus="MenuItem_GotFocus" >
                 <MenuItem.Header>
                     <WrapPanel Background="#2D8395" >
-                        <Image Height="60" Width="60"  Source="F:\Arbeit\projekt\Exit_Menu.png"></Image>
+                        <Image Height="60" Width="60"  Source="Image\Exit_Menu.png"></Image>
                         <ContentPresenter  Content="Exit" />
                     </WrapPanel>
                 </MenuItem.Header>
@@ -462,7 +462,7 @@
             </Grid>
         </Grid>
         <!--Mang_Course_Grid-->
-        <Grid x:Name="Student_Information" Grid.Row="1" Visibility="Visible" >
+        <Grid x:Name="Student_Information" Grid.Row="1" Visibility="Hidden" >
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"/>
                 <RowDefinition/>

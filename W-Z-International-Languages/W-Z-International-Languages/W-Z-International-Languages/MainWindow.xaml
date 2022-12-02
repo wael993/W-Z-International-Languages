@@ -6,9 +6,9 @@
         xmlns:local="clr-namespace:W_Z_International_Languages"
         mc:Ignorable="d"
      Title="W_Z International Languages" Height="1000" Width="1600"  WindowState="Maximized">
-    <Grid PreviewKeyDown="Grid_PreviewKeyDown">
+    <Grid PreviewKeyDown="Grid_PreviewKeyDown" >
         <Grid.Background>
-            <ImageBrush ImageSource="F:\Arbeit\projekt\images ().jfif" />
+            <ImageBrush ImageSource="Image\background.png" />
         </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="0.8*"/>
@@ -17,7 +17,7 @@
         <Border Grid.Row="0" Background="#2D8395" Opacity="0.85" Margin="0,30,0,0" />
         <WrapPanel Margin="0,30,0,0">
             <Border Grid.Row="0" CornerRadius="4" HorizontalAlignment="Left" >
-                <Image Source="F:\Arbeit\projekt\Logo.png" />
+                <Image Source="Image/Logo.png" />
 
             </Border>
             <TextBlock Text="W_Z International Languages und Education" FontSize="35" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="70" Foreground="Snow"/>
@@ -32,14 +32,14 @@
                     <RowDefinition/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <Image Source="F:\Arbeit\projekt\imag.png" />
+                <Image Source="Image\imag.png" />
                 <TextBlock Grid.Row="1"  Text="Please Login First !" VerticalAlignment="Top"  HorizontalAlignment="Center"  FontSize="32" FontWeight="Bold" Foreground="#147185" />
                 <WrapPanel Grid.Row="2">
-                    <Image Source="F:\Arbeit\projekt\Login_logo.png" Margin="20,0,0,0" Width="100"/>
+                    <Image Source="Image\Login_logo.png" Margin="20,0,0,0" Width="100"/>
                     <TextBox x:Name="UserName" Text="User Name" Width="380" FontSize="26" Foreground="#B8C4C6" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" GotFocus="UserName_GotFocus"/>
                 </WrapPanel>
                 <WrapPanel Grid.Row="3">
-                    <Image Source="F:\Arbeit\projekt\Pass_Logo_.png" Margin="20,0,0,0" Width="100"/>
+                    <Image Source="Image\Pass_Logo_.png" Margin="20,0,0,0" Width="100"/>
                     <TextBox x:Name="Pass" Text="Pass Word" Width="380" FontSize="26" Foreground="#B8C4C6" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" GotFocus="Pass_GotFocus" />
                 </WrapPanel>
                 <Button x:Name="LogIn" Grid.Row="4" Content="Login" Height="70" FontSize="36" FontWeight="Bold" Background="#2D8395" Foreground="#B8C4C6"   Margin="20,0,20,20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="LogIn_Click"/>

@@ -22,6 +22,7 @@ F:\Arbeit\projekt\Zweit\W-Z-International-Languages\W-Z-International-Languages\
 F:\Arbeit\projekt\Zweit\W-Z-International-Languages\W-Z-International-Languages\W-Z-International-Languages\bin\Debug\de\EntityFramework.resources.dll
 F:\Arbeit\projekt\Zweit\W-Z-International-Languages\W-Z-International-Languages\W-Z-International-Languages\obj\Debug\W-Z-International-Languages_Content.g.cs
 F:\Arbeit\projekt\Zweit\W-Z-International-Languages\W-Z-International-Languages\W-Z-International-Languages\obj\Debug\W-Z-International-Languages.csproj.CopyComplete
+F:\Arbeit\projekt\2_Zweit\W-Z-International-Languages\W-Z-International-Languages\W-Z-International-Languages\bin\Debug\EntityFramework.xml
 F:\Arbeit\projekt\2_Zweit\W-Z-International-Languages\W-Z-International-Languages\W-Z-International-Languages\bin\Debug\W-Z-International-Languages.exe.config
 F:\Arbeit\projekt\2_Zweit\W-Z-International-Languages\W-Z-International-Languages\W-Z-International-Languages\bin\Debug\W-Z-International-Languages.exe.manifest
 F:\Arbeit\projekt\2_Zweit\W-Z-International-Languages\W-Z-International-Languages\W-Z-International-Languages\bin\Debug\W-Z-International-Languages.application
@@ -29,10 +30,8 @@ F:\Arbeit\projekt\2_Zweit\W-Z-International-Languages\W-Z-International-Language
 F:\Arbeit\projekt\2_Zweit\W-Z-International-Languages\W-Z-International-Languages\W-Z-International-Languages\bin\Debug\W-Z-International-Languages.pdb
 F:\Arbeit\projekt\2_Zweit\W-Z-International-Languages\W-Z-International-Languages\W-Z-International-Languages\bin\Debug\EntityFramework.dll
 F:\Arbeit\projekt\2_Zweit\W-Z-International-Languages\W-Z-International-Languages\W-Z-International-Languages\bin\Debug\EntityFramework.SqlServer.dll
-F:\Arbeit\projekt\2_Zweit\W-Z-International-Languages\W-Z-International-Languages\W-Z-International-Languages\bin\Debug\EntityFramework.xml
 F:\Arbeit\projekt\2_Zweit\W-Z-International-Languages\W-Z-International-Languages\W-Z-International-Languages\bin\Debug\EntityFramework.SqlServer.xml
 F:\Arbeit\projekt\2_Zweit\W-Z-International-Languages\W-Z-International-Languages\W-Z-International-Languages\bin\Debug\de\EntityFramework.resources.dll
-F:\Arbeit\projekt\2_Zweit\W-Z-International-Languages\W-Z-International-Languages\W-Z-International-Languages\obj\Debug\W-Z-International-Languages.csprojAssemblyReference.cache
 F:\Arbeit\projekt\2_Zweit\W-Z-International-Languages\W-Z-International-Languages\W-Z-International-Languages\obj\Debug\Home.g.cs
 F:\Arbeit\projekt\2_Zweit\W-Z-International-Languages\W-Z-International-Languages\W-Z-International-Languages\obj\Debug\MainWindow.g.cs
 F:\Arbeit\projekt\2_Zweit\W-Z-International-Languages\W-Z-International-Languages\W-Z-International-Languages\obj\Debug\App.g.cs

@@ -172,6 +172,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Image\background.png" />
+    <Resource Include="Image\imag.png" />
+    <Resource Include="Image\Login_logo.png" />
+    <Resource Include="Image\Logo.png" />
+    <Resource Include="Image\Pass_Logo_.png" />
+    <Resource Include="Image\images %282%29.png" />
+    <Resource Include="Image\Student_Menu.png" />
+    <Resource Include="Image\Exit_Menu.png" />
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Model1.Context.cs</LastGenOutput>
@@ -198,5 +206,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
