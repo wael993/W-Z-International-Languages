@@ -139,7 +139,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="W_Z_International_LanguagesEntities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="W_Z_International_Languag" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="course" EntityType="Self.course" />
           <EntitySet Name="course_student" EntityType="Self.course_student" />
           <EntitySet Name="student" EntityType="Self.student" />
@@ -157,7 +157,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="W_Z_International_LanguagesModelStoreContainer" CdmEntityContainer="W_Z_International_LanguagesEntities1">
+        <EntityContainerMapping StorageEntityContainer="W_Z_International_LanguagesModelStoreContainer" CdmEntityContainer="W_Z_International_Languag">
           <EntitySetMapping Name="course">
             <EntityTypeMapping TypeName="W_Z_International_LanguagesModel.course">
               <MappingFragment StoreEntitySet="course">

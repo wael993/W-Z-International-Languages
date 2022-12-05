@@ -41,7 +41,7 @@ namespace W_Z_International_Languages
             else 
             {
                
-                    using (W_Z_International_LanguagesEntities1 db = new W_Z_International_LanguagesEntities1())    //Verbindung zur Datenbank wird aufgebaut und  neuen DBContext Angelegt. 
+                    using (W_Z_International_Languag db = new W_Z_International_Languag())    //Verbindung zur Datenbank wird aufgebaut und  neuen DBContext Angelegt. 
                     {
                         var list = db.student.Where(x => x.Username == UserName.Text && x.Password == Pass.Text).ToList();// Zugriff auf ("UserName","Passwort")Spalten in "Benutzer" Tabell. 
                         foreach (var b in list)

@@ -29,7 +29,7 @@ CREATE TABLE student (
 	FirstName NVARCHAR (50) NOT NULL,
 	LastName NVARCHAR (50) NOT NULL,
 	Birthday date NOT NULL,
-	Gender bit ,
+	Gender  NVARCHAR (50) NOT NULL ,
 	--1 is Male , 0 is Female
 	Phone  NVARCHAR (25),
 	Adress NVARCHAR (50) 
@@ -60,26 +60,26 @@ INSERT INTO student(Username,Password,FirstName,LastName, Birthday,Gender,Phone,
 
 
 INSERT INTO student(FirstName,LastName, Birthday,Gender,Phone,Adress)
-			  VALUES     ('Mohammad','Zobani','10-08-2021','1','01766456565','66386 Sankt Ingbert , kurzstr.2'),
-						 ('lila','Mueller','30-03-2010','0','01766456565','66111 Saarbrücken, albertallestr.31'),
-						 ('Layla','Schmitt','30-03-2001','0','01766456565','66111 Saarbrücken, albertallestr.31'),
-					 	 ('markus','Habeb','30-03-2002','1','017664655999','66111 Saarbrücken, albertallestr.31'),
-					   	 ('Thomas','Braun','30-03-2001','1','01766456565','66111 Saarbrücken, albertallestr.31'),
-						 ('Sam','Oha','30-03-2005','1','017664655999','66111 Saarbrücken, albertallestr.31'),
-						 ('Max','Mueller','30-03-2003','1','01766456565','66111 Saarbrücken, albertallestr.31'),
-						 ('Frans','Muaster','30-03-1999','1','01766456565','66111 Saarbrücken, albertallestr.31'),
-						('lamis','Ohr','30-03-1988','0','01766456565','66111 Saarbrücken, albertallestr.31'),
-						('waled','Scmidt','30-03-1997','1','01766456565','66111 Saarbrücken, albertallestr.31'),
-						('nina','walder','30-03-2000','0','01766456565','66111 Saarbrücken, albertallestr.31'),
-						('alia','Mueller','30-03-1996','0','01766456565','66111 Saarbrücken, albertallestr.31'),
-						('wesam','Schmitt','30-03-2001','1','01766456565','66111 Saarbrücken, albertallestr.31'),
-						('emily','Mueller','30-03-2001','0','01766456565','66111 Saarbrücken, albertallestr.31'),
-						('Farhan','Mueller','30-03-2005','1','01766456565','66111 Saarbrücken, albertallestr.31'),
-						('lia','Habeb','30-03-2006','0','01766456565','66111 Saarbrücken, albertallestr.31'),
-						('smoil','Mueller','30-03-2000','1','01766456565','66111 Saarbrücken, albertallestr.31'),
-						('kinan','Braun','30-03-1998','1','01766456565','66111 Saarbrücken, albertallestr.31'),
-						('Hayya','Oha','30-03-1997','0','01766456565','66111 Saarbrücken, albertallestr.31'),
-						('haydi','Muaster','30-03-2000','0','01766456565','66111 Saarbrücken, albertallestr.31')
+			  VALUES     ('Mohammad','Zobani','10-08-2021','Male','01766456565','66386 Sankt Ingbert , kurzstr.2'),
+						 ('lila','Mueller','30-03-2010','Female','01766456565','66111 Saarbrücken, albertallestr.31'),
+						 ('Layla','Schmitt','30-03-2001','Female','01766456565','66111 Saarbrücken, albertallestr.31'),
+					 	 ('markus','Habeb','30-03-2002','Male','017664655999','66111 Saarbrücken, albertallestr.31'),
+					   	 ('Thomas','Braun','30-03-2001','Male','01766456565','66111 Saarbrücken, albertallestr.31'),
+						 ('Sam','Oha','30-03-2005','Male','017664655999','66111 Saarbrücken, albertallestr.31'),
+						 ('Max','Mueller','30-03-2003','Male','01766456565','66111 Saarbrücken, albertallestr.31'),
+						 ('Frans','Muaster','30-03-1999','Male','01766456565','66111 Saarbrücken, albertallestr.31'),
+						('lamis','Ohr','30-03-1988','Female','01766456565','66111 Saarbrücken, albertallestr.31'),
+						('waled','Scmidt','30-03-1997','Male','01766456565','66111 Saarbrücken, albertallestr.31'),
+						('nina','walder','30-03-2000','Female','01766456565','66111 Saarbrücken, albertallestr.31'),
+						('alia','Mueller','30-03-1996','Female','01766456565','66111 Saarbrücken, albertallestr.31'),
+						('wesam','Schmitt','30-03-2001','Male','01766456565','66111 Saarbrücken, albertallestr.31'),
+						('emily','Mueller','30-03-2001','Female','01766456565','66111 Saarbrücken, albertallestr.31'),
+						('Farhan','Mueller','30-03-2005','Male','01766456565','66111 Saarbrücken, albertallestr.31'),
+						('lia','Habeb','30-03-2006','Female','01766456565','66111 Saarbrücken, albertallestr.31'),
+						('smoil','Mueller','30-03-2000','Male','01766456565','66111 Saarbrücken, albertallestr.31'),
+						('kinan','Braun','30-03-1998','Male','01766456565','66111 Saarbrücken, albertallestr.31'),
+						('Hayya','Oha','30-03-1997','Female','01766456565','66111 Saarbrücken, albertallestr.31'),
+						('haydi','Muaster','30-03-2000','Female','01766456565','66111 Saarbrücken, albertallestr.31')
 
 
 

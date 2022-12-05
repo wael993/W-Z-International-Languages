@@ -60,7 +60,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="W_Z_International_LanguagesEntities1" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="W_Z_International_Languag" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="course" EntityType="Self.course" />
     <EntitySet Name="course_student" EntityType="Self.course_student" />
     <EntitySet Name="student" EntityType="Self.student" />

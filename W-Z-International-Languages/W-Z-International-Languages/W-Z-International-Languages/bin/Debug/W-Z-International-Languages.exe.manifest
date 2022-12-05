@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="W-Z-International-Languages.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="W-Z-International-Languages.exe" version="1.0.0.2" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <application />
   <entryPoint>
     <assemblyIdentity name="W-Z-International-Languages" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
@@ -85,7 +85,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>FYiQUA6J0RWgAK22fCYKZhd1/8S0ZZjK8K5gC+PF8ng=</dsig:DigestValue>
+        <dsig:DigestValue>1xQxtTI/QYYriEzoc3e40oXFRvV8rxe0M2vApIWNJqo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -107,13 +107,13 @@
       <dsig:DigestValue>CabSpKm6yYNT6twBZzKHKM3v3aBYMgNzK0uSDYpHoWw=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="W-Z-International-Languages.exe.config" size="1452">
+  <file name="W-Z-International-Languages.exe.config" size="2617">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>fXmgrt17DrMRWUBc5Wo4BQcOF12LNBwJkLUsXxSDiuI=</dsig:DigestValue>
+      <dsig:DigestValue>/fjRpXlMrxV8kEpjejYnYZNZe7wSQg2I2NjRgI7JemI=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

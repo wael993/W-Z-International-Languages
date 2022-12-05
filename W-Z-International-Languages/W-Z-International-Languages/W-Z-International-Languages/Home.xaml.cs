@@ -22,7 +22,7 @@ namespace W_Z_International_Languages
     public partial class Home : Window
     {
         private ICollectionView CollectionView;
-        W_Z_International_LanguagesEntities1 ctx = new W_Z_International_LanguagesEntities1();
+        W_Z_International_Languag ctx = new W_Z_International_Languag();
 
         public Home()
         {
@@ -302,7 +302,7 @@ namespace W_Z_International_Languages
         private void Btn_New_Student_Add_Click(object sender, RoutedEventArgs e)
         {
             bool gen;
-            if (CB_New_Gender.Text== "Male")
+            if (CB_New_Gender.Text == "Male")
             {
                 gen = true;
             }
@@ -322,7 +322,8 @@ namespace W_Z_International_Languages
                     FirstName = TB_New_First_Name.Text,
                     LastName = TB_New_Last_Name.Text,
                     Birthday = New_birthday.DisplayDate,
-                    Gender = gen,
+                    //Gender = CB_Mang_Gender.Text,
+                    Gender=gen,
                     Phone = TB_New_Phane.Text,
                     Adress = TB_New_Address.Text,
 
