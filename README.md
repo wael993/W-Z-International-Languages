@@ -1,1 +1,8 @@
 ![LogIn](https://user-images.githubusercontent.com/95384063/206592540-6785ae08-0133-4951-9491-4e05f098a851.png)
+![LogIn_Incorrect](https://user-images.githubusercontent.com/95384063/206592722-1646381a-dc8f-413c-9a27-b913aa297372.png)
+![Dashboard](https://user-images.githubusercontent.com/95384063/206592815-577c50e1-7b91-4b0f-8129-5a9bdc2d831d.png)
+![View Student](https://user-images.githubusercontent.com/95384063/206592830-c96d90ca-3970-4cfb-ad7e-2914a8505d08.png)
+![New Student Register](https://user-images.githubusercontent.com/95384063/206592840-accb08cf-a85e-423c-b428-c244cc42bbb9.png)
+![Student Manage](https://user-images.githubusercontent.com/95384063/206592844-8537756a-452a-41ce-a27c-e5acf252b7d2.png)
+![View Courses](https://user-images.githubusercontent.com/95384063/206592855-81a1a832-e8ad-415e-b7dd-57d231041ae9.png)
+![New Courses](https://user-images.githubusercontent.com/95384063/206592860-bf47cf79-a0ff-4193-a46e-2a439c225889.png)
