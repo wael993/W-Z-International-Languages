@@ -34,7 +34,28 @@ namespace W_Z_International_Languages
             Student_Registration.DataContext = student;
             View_Student.DataContext = student;
             Student_Mang.DataContext = student;
+            var coursestudent = ctx.course_student.ToList();
 
+            Student_Information.DataContext = coursestudent;
+
+        }
+        private void AboutW_Z_Click(object sender, RoutedEventArgs e)
+        {
+            Student_Mang.Visibility = Visibility.Hidden;
+            Student_Registration.Visibility = Visibility.Hidden;
+            New_Course.Visibility = Visibility.Hidden;
+            Mang_Course.Visibility = Visibility.Hidden;
+            View_Student.Visibility = Visibility.Hidden;
+            View_Course.Visibility = Visibility.Hidden;
+            Student_Information.Visibility = Visibility.Hidden;
+            Student_Information.Visibility = Visibility.Visible;
+            //int student_id_h = Convert.ToInt32(hidden_st_id);
+            //student _student = ctx.student.Where(x => x.student_id == student_id_h).FirstOrDefault();
+            //Student_Information_.DataContext = _student;
+        }
+        private void Student_info_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            Student_Information_.Visibility = Visibility.Visible;
         }
 
         //private void studenteinladen()
@@ -379,6 +400,10 @@ namespace W_Z_International_Languages
                                             ||  x.Birthday.ToString().Contains(searchStr));
             CollectionView.MoveCurrentTo(w);
         }
+
+    
+
+
 
         //private void DG_Student_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         //{

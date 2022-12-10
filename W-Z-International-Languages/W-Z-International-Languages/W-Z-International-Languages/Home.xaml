@@ -66,7 +66,7 @@
                         <ContentPresenter  Content="Why us ?"/>
                     </WrapPanel>
                 </MenuItem.Header>
-                <MenuItem Background="#05938C" Foreground="Snow" Header="About W_Z"/>
+                <MenuItem Background="#05938C" Foreground="Snow" Header="About W_Z" Click="AboutW_Z_Click"/>
                 <MenuItem Background="#05938C" Foreground="Snow" Header="Our Locations"/>
                 <MenuItem Background="#05938C" Foreground="Snow" Header="Our school and service"/>
                 <MenuItem Background="#05938C" Foreground="Snow" Header="Student Portal"/>
@@ -471,7 +471,7 @@
             </Grid>
         </Grid>
         <!--Mang_Course_Grid-->
-        <Grid x:Name="Student_Information" Grid.Row="1" Visibility="Hidden" >
+        <Grid x:Name="Student_Information" Grid.Row="1" Visibility="Visible" >
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"/>
                 <RowDefinition/>
@@ -486,35 +486,61 @@
                 </Grid.RowDefinitions>
 
 
-                <!--<DataGrid Grid.Row="0" 
+                <DataGrid Grid.Row="0" 
+                          x:Name="Student_info"
                       FontSize="19"
                       ItemsSource="{Binding}"
                       AutoGenerateColumns="False"               
-                      IsReadOnly="False"
+                      IsReadOnly="True"
                       CanUserAddRows="False"
                       IsSynchronizedWithCurrentItem="True"
                       RowHeight="35"
-                      Background="Transparent">
+                      Background="Transparent"
+                          MouseDoubleClick="Student_info_MouseDoubleClick">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="Student ID" Width="110" IsReadOnly="True" Binding="{Binding student_id }"  />
-                        <DataGridTextColumn Header="First Name" Width="110" Binding="{Binding FirstName}" />
-                        <DataGridTextColumn Header="Last Name " Width="110"  Binding="{Binding LastName}"/>
-                        <DataGridTextColumn Header="Gender" Width="110" Binding="{Binding Gender}"/>
-                        <DataGridTextColumn Header="Birthday" Width="110" Binding="{Binding Birthday}"/>
-                        <DataGridTextColumn Header="Phane" Width="110" Binding="{Binding Phone}"/>
-                        <DataGridTextColumn Header="Address" Width="*" Binding="{Binding Adress}"/>
+                        <DataGridTextColumn Header="Student ID" Width="110" Binding="{Binding student.student_id }"  />
+                        <DataGridTextColumn Header="First Name" Width="110" Binding="{Binding student.FirstName}" />
+                        <DataGridTextColumn Header="Last Name " Width="110"  Binding="{Binding student.LastName}"/>
+                        <DataGridTextColumn Header="Gender" Width="110" Binding="{Binding student.Gender}"/>
+                        <DataGridTextColumn Header="Birthday" Width="110" Binding="{Binding student.Birthday}"/>
+                        <DataGridTextColumn Header="Phane" Width="110" Binding="{Binding student.Phone}"/>
+                        <DataGridTextColumn Header="Address" Width="*" Binding="{Binding student.Adress}"/>
                     </DataGrid.Columns>
-                </DataGrid>-->
+                </DataGrid>
 
 
+                <TextBlock Name="hidden_st_id" Text="{Binding student_id}" Visibility="Hidden"/>
 
+                <Grid x:Name="Student_Information_"
+                      Grid.Row="2"
+                      Visibility="Visible">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <TextBlock x:Name="STudent_name" Grid.Column="0" Grid.Row="0" Text="{Binding student.FirstName}" FontSize="22" Foreground="Snow"/>
+                    <TextBlock x:Name="STudent_LAstname" Grid.Column="0" Grid.Row="1" Text="{Binding student.LastName}" FontSize="22" Foreground="Snow"/>
+                    <TextBlock x:Name="STudent_Gender" Grid.Column="0" Grid.Row="2" Text="{Binding student.Gender}" FontSize="22" Foreground="Snow"/>
+                    <TextBlock x:Name="STudent_Birthday" Grid.Column="1" Grid.Row="0" Text="{Binding student.Birthday}" FontSize="22" Foreground="Snow"/>
+                    <TextBlock x:Name="STudent_Phone" Grid.Column="1" Grid.Row="1" Text="{Binding student.Phone}" FontSize="22" Foreground="Snow"/>
+                    <TextBlock x:Name="STudent_Adress" Grid.Column="1" Grid.Row="2" Text="{Binding student.Adress}" FontSize="22" Foreground="Snow"/>
+                    <TextBlock x:Name="STudent_Cours" Grid.Column="2" Grid.Row="0" Text="{Binding course.course_Name}" FontSize="22" Foreground="Snow"/>
+                    <TextBlock x:Name="STudent_Coudrs" Grid.Column="2" Grid.Row="1" Text="{Binding course.courseHour}" FontSize="22" Foreground="Snow"/>
+                    <TextBlock x:Name="STudent_Cousrs" Grid.Column="2" Grid.Row="2" Text="{Binding course.Description}" FontSize="22" Foreground="Snow"/>
 
+                </Grid>
 
                 <!--<ListView Grid.Row="2"
                   x:Name="Student_Information_" 
-                  IsSynchronizedWithCurrentItem="True"
+                 Visibility="Hidden"
                   ItemsSource="{Binding }" SelectedIndex="1" >
-
+ --><!--IsSynchronizedWithCurrentItem="True"--><!--
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <TextBlock>                   
