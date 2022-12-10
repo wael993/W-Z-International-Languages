@@ -99,7 +99,7 @@
                 <TextBlock Text="Search" Foreground="Wheat"  FontSize="22"  />
                 <TextBox  Grid.Row="1" x:Name="tbx_View_Student_search"  Width="250" Foreground="Wheat"  FontSize="22" HorizontalContentAlignment="Center" Background="Transparent" GotFocus="tbx_View_Student_search_GotFocus" TextChanged="tbx_View_Student_search_TextChanged" />
             </WrapPanel>
-                <Label x:Name="Label_student_ID" Content="{Binding student_id}" Grid.Row="1" HorizontalAlignment="Left"/>
+                <TextBlock x:Name="Label_student_ID" Text="{Binding student_id}" Grid.Row="1" HorizontalAlignment="Left"/>
             <DataGrid 
                       x:Name="DG_Student"
                       Grid.Row="2" 
@@ -110,8 +110,8 @@
                       CanUserAddRows="False"
                       IsSynchronizedWithCurrentItem="True"
                       RowHeight="35"
-                      Background="Transparent">
-                <!--MouseDoubleClick="DG_Student_MouseDoubleClick"-->
+                      Background="Transparent"
+                    MouseDoubleClick="DG_Student_MouseDoubleClick">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Student ID" Width="110"  Binding="{Binding student_id }"  />
                     <DataGridTextColumn Header="First Name" Width="110"  Binding="{Binding FirstName}" />
@@ -119,6 +119,7 @@
                     <DataGridTextColumn Header="Gender"     Width="110"  Binding="{Binding Gender}"/>
                     <DataGridTextColumn Header="Birthday"   Width="110"  Binding="{Binding Birthday}"/>
                     <DataGridTextColumn Header="Phane"      Width="110"  Binding="{Binding Phone}"/>
+                    <!--<DataGridTextColumn Header="course"    Width="110"  Binding="{Binding course.course_Name}"/>-->
                     <DataGridTextColumn Header="Address"    Width="*"    Binding="{Binding Adress}"/>
 
                 </DataGrid.Columns>
@@ -478,41 +479,11 @@
             </Grid.RowDefinitions>
             <TextBlock Text="Student Information" Height="75" TextAlignment="Center" Padding="15" Grid.Row="0" Background="#2D8395" Foreground="White" FontSize="30" FontWeight="Bold"   />
             <Grid Grid.Row="1">
-                <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition/>
-      
-    
-                </Grid.RowDefinitions>
-
-
-                <DataGrid Grid.Row="0" 
-                          x:Name="Student_info"
-                      FontSize="19"
-                      ItemsSource="{Binding}"
-                      AutoGenerateColumns="False"               
-                      IsReadOnly="True"
-                      CanUserAddRows="False"
-                      IsSynchronizedWithCurrentItem="True"
-                      RowHeight="35"
-                      Background="Transparent"
-                          MouseDoubleClick="Student_info_MouseDoubleClick">
-                    <DataGrid.Columns>
-                        <DataGridTextColumn Header="Student ID" Width="110" Binding="{Binding student.student_id }"  />
-                        <DataGridTextColumn Header="First Name" Width="110" Binding="{Binding student.FirstName}" />
-                        <DataGridTextColumn Header="Last Name " Width="110"  Binding="{Binding student.LastName}"/>
-                        <DataGridTextColumn Header="Gender" Width="110" Binding="{Binding student.Gender}"/>
-                        <DataGridTextColumn Header="Birthday" Width="110" Binding="{Binding student.Birthday}"/>
-                        <DataGridTextColumn Header="Phane" Width="110" Binding="{Binding student.Phone}"/>
-                        <DataGridTextColumn Header="Address" Width="*" Binding="{Binding student.Adress}"/>
-                    </DataGrid.Columns>
-                </DataGrid>
-
 
                 <TextBlock Name="hidden_st_id" Text="{Binding student_id}" Visibility="Hidden"/>
 
                 <Grid x:Name="Student_Information_"
-                      Grid.Row="2"
+               
                       Visibility="Visible">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
@@ -535,39 +506,7 @@
                     <TextBlock x:Name="STudent_Cousrs" Grid.Column="2" Grid.Row="2" Text="{Binding course.Description}" FontSize="22" Foreground="Snow"/>
 
                 </Grid>
-
-                <!--<ListView Grid.Row="2"
-                  x:Name="Student_Information_" 
-                 Visibility="Hidden"
-                  ItemsSource="{Binding }" SelectedIndex="1" >
- --><!--IsSynchronizedWithCurrentItem="True"--><!--
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <TextBlock>                   
-                                <Run Text="{Binding student_id}"/>
-                                <LineBreak/>
-                                <Run Text="{Binding FirstName}"/>
-                                <LineBreak/>
-                                <Run Text="{Binding LastName}"/>
-                                <LineBreak/>
-                                <Run Text="{Binding Gender}"/>
-                                <LineBreak/>
-                                <Run Text="{Binding Birthday}"/>
-                                <LineBreak/>
-                                <Run Text="{Binding Phone}"/>
-                                <LineBreak/>
-                                <Run Text="{Binding Adress}"/>
-                            </TextBlock>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>-->
             </Grid>
-
-
-
-
-
-
         </Grid>
-        </Grid>
+    </Grid>
 </Window>

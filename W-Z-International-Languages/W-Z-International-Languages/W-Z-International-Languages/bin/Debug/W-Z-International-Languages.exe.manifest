@@ -78,14 +78,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="W-Z-International-Languages.exe" size="1594320">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="W-Z-International-Languages.exe" size="1593808">
       <assemblyIdentity name="W-Z-International-Languages" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>t4kjiatI/HX9ame/ONHmjBuE2mtL3/BZVdqXCKSBIfE=</dsig:DigestValue>
+        <dsig:DigestValue>bPqt+XP89aH+/W8gD0ewjTQh7W/7vO1kCPfE3OCyvII=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
