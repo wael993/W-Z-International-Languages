@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data.Entity;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,16 +35,8 @@ namespace W_Z_International_Languages
             Student_Mang.DataContext = student;
            
         }
-        private void AboutW_Z_Click(object sender, RoutedEventArgs e)
+        public void show()
         {
-           
-        }
-        private void DG_Student_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {          
-            int student_id_h = Convert.ToInt32(Label_student_ID.Text);
-            course_student n = ctx.course_student.Where(x => x.student_id == student_id_h).FirstOrDefault();
-            Student_Information.DataContext = n;
-
             Student_Mang.Visibility = Visibility.Hidden;
             Student_Registration.Visibility = Visibility.Hidden;
             New_Course.Visibility = Visibility.Hidden;
@@ -51,8 +44,21 @@ namespace W_Z_International_Languages
             View_Student.Visibility = Visibility.Hidden;
             View_Course.Visibility = Visibility.Hidden;
             Student_Information.Visibility = Visibility.Hidden;
+
+        }
+        private void AboutW_Z_Click(object sender, RoutedEventArgs e)
+        {
+            Process.Start("https://github.com/wael993/W-Z-International-Languages.git");
+
+        }
+        private void DG_Student_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {          
+            int student_id_h = Convert.ToInt32(Label_student_ID.Text);
+            course_student n = ctx.course_student.Where(x => x.student_id == student_id_h).FirstOrDefault();
+            Student_Information.DataContext = n;
+
+            show();
             Student_Information.Visibility = Visibility.Visible;
-            Student_Information_.Visibility = Visibility.Visible;
         }
 
        
@@ -64,28 +70,16 @@ namespace W_Z_International_Languages
 
         private void Dashboard_MenuItem_Click(object sender, RoutedEventArgs e)
         {
-            Student_Mang.Visibility = Visibility.Hidden;
-            Student_Registration.Visibility = Visibility.Hidden;
-            New_Course.Visibility = Visibility.Hidden;
-            Mang_Course.Visibility = Visibility.Hidden;
-            View_Student.Visibility = Visibility.Hidden;
-            View_Course.Visibility = Visibility.Hidden;
-            Student_Information.Visibility = Visibility.Hidden;
-
+            show();
         }
         private void MenuItem_view_Student_Click(object sender, RoutedEventArgs e)
         {
             ctx.student.Load();
             CollectionView = CollectionViewSource.GetDefaultView(ctx.student.Local);
             View_Student.DataContext = CollectionView;
-
+         
+            show();
             View_Student.Visibility = Visibility.Visible;
-            Student_Registration.Visibility = Visibility.Hidden;
-            Student_Mang.Visibility = Visibility.Hidden;
-            New_Course.Visibility = Visibility.Hidden;
-            Mang_Course.Visibility = Visibility.Hidden;
-            View_Course.Visibility = Visibility.Hidden;
-            Student_Information.Visibility = Visibility.Hidden;
 
 
         }
@@ -95,14 +89,8 @@ namespace W_Z_International_Languages
             CollectionView = CollectionViewSource.GetDefaultView(ctx.student.Local);
              Student_Registration.DataContext = CollectionView;
 
+            show();
             Student_Registration.Visibility = Visibility.Visible;
-            Student_Mang.Visibility = Visibility.Hidden;
-            New_Course.Visibility = Visibility.Hidden;
-            Mang_Course.Visibility = Visibility.Hidden;
-            View_Student.Visibility = Visibility.Hidden;
-            View_Course.Visibility = Visibility.Hidden;
-            Student_Information.Visibility = Visibility.Hidden;
-
         }
 
         private void MenuItem_Manage_Student_Click(object sender, RoutedEventArgs e)
@@ -111,48 +99,43 @@ namespace W_Z_International_Languages
             CollectionView = CollectionViewSource.GetDefaultView(ctx.student.Local);
             Student_Mang.DataContext = CollectionView;
 
+            show();
             Student_Mang.Visibility = Visibility.Visible;
-            Student_Registration.Visibility = Visibility.Hidden;
-            New_Course.Visibility = Visibility.Hidden;
-            Mang_Course.Visibility = Visibility.Hidden;
-            View_Student.Visibility = Visibility.Hidden;
-            View_Course.Visibility = Visibility.Hidden;
-            Student_Information.Visibility = Visibility.Hidden;
+
+        }
+        public void cours()
+        {
+        ctx.course.Load();
+            CollectionView = CollectionViewSource.GetDefaultView(ctx.course.Local);
+
 
         }
         private void View_Course_Click(object sender, RoutedEventArgs e)
         {
+            cours();
+            View_Course.DataContext = CollectionView;
+            show();
+
             View_Course.Visibility = Visibility.Visible;
-            Student_Mang.Visibility = Visibility.Hidden;
-            Student_Registration.Visibility = Visibility.Hidden;
-            New_Course.Visibility = Visibility.Hidden;
-            Mang_Course.Visibility = Visibility.Hidden;
-            View_Student.Visibility = Visibility.Hidden;
-            Student_Information.Visibility = Visibility.Hidden;
 
         }
         private void New_Course_Click(object sender, RoutedEventArgs e)
         {
+            cours();
+            New_Course.DataContext = CollectionView;
+
+            show();
             New_Course.Visibility = Visibility.Visible;
-            Student_Mang.Visibility = Visibility.Hidden;
-            Student_Registration.Visibility = Visibility.Hidden;
-            Mang_Course.Visibility = Visibility.Hidden;
-            View_Student.Visibility = Visibility.Hidden;
-            View_Course.Visibility = Visibility.Hidden;
-            Student_Information.Visibility = Visibility.Hidden;
 
         }
 
         private void Mang_Course_Click(object sender, RoutedEventArgs e)
         {
+            cours();
+            Mang_Course.DataContext = CollectionView;
+
+            show();
             Mang_Course.Visibility = Visibility.Visible;
-            New_Course.Visibility = Visibility.Hidden;
-            Student_Mang.Visibility = Visibility.Hidden;
-            Student_Registration.Visibility = Visibility.Hidden;
-            View_Student.Visibility = Visibility.Hidden;
-            View_Course.Visibility = Visibility.Hidden;
-            Student_Information.Visibility = Visibility.Hidden;
-            Student_Information.Visibility = Visibility.Hidden;
 
         }
 
@@ -251,7 +234,7 @@ namespace W_Z_International_Languages
             TB_Mang_Address.Text = "";
             TB_Mang_Last_Name.Text = "";
             TB_Mang_Phane.Text = "";
-            Mang_birthday.SelectedDate = null;
+            Mang_birthday.Text = "";
         }
 
         private void Btn_NewCourse_Clear_Click(object sender, RoutedEventArgs e)

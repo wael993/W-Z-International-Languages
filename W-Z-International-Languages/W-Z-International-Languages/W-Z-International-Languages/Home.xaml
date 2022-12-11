@@ -27,7 +27,7 @@
             <MenuItem Foreground="#B8C4C6"  Padding="12" Click="Dashboard_MenuItem_Click" >
                 <MenuItem.Header >
                     <WrapPanel Background="#2D8395">
-                        <Image Height="60" Width="60"  Source="Image\images (2).png"></Image>
+                        <Image Height="60" Width="60"  Source="Image\Dash.png"></Image>
                         <ContentPresenter  Content="Dashboard" />
                     </WrapPanel>
                 </MenuItem.Header>
@@ -49,7 +49,7 @@
             <MenuItem Foreground="#B8C4C6"  Padding="12" >
                 <MenuItem.Header>
                     <WrapPanel Background="#2D8395" >
-                        <Image Height="60" Width="60"  Source="Image\images (2).png"></Image>
+                        <Image Height="60" Width="60"  Source="Image\Course_.png"></Image>
                         <ContentPresenter  Content="Course" />
                     </WrapPanel>
                 </MenuItem.Header>
@@ -59,17 +59,13 @@
                 <MenuItem Background="#05938C" Foreground="Snow" Header="Print" Click="MenuItem_Course_Print_Click"/>
             </MenuItem>
 
-            <MenuItem Foreground="#B8C4C6"  Padding="12" >
+            <MenuItem Foreground="#B8C4C6"  Padding="12" Click="AboutW_Z_Click" >
                 <MenuItem.Header>
                     <WrapPanel Background="#2D8395" >
-                        <Image Height="60" Width="60"  Source="Image\images (2).png"></Image>
+                        <Image Height="60" Width="60"  Source="Image\About.png"></Image>
                         <ContentPresenter  Content="Why us ?"/>
                     </WrapPanel>
                 </MenuItem.Header>
-                <MenuItem Background="#05938C" Foreground="Snow" Header="About W_Z" Click="AboutW_Z_Click"/>
-                <MenuItem Background="#05938C" Foreground="Snow" Header="Our Locations"/>
-                <MenuItem Background="#05938C" Foreground="Snow" Header="Our school and service"/>
-                <MenuItem Background="#05938C" Foreground="Snow" Header="Student Portal"/>
             </MenuItem>
 
             <MenuItem Foreground="#B8C4C6"  Padding="12" GotFocus="MenuItem_GotFocus" >
@@ -99,7 +95,7 @@
                 <TextBlock Text="Search" Foreground="Wheat"  FontSize="22"  />
                 <TextBox  Grid.Row="1" x:Name="tbx_View_Student_search"  Width="250" Foreground="Wheat"  FontSize="22" HorizontalContentAlignment="Center" Background="Transparent" GotFocus="tbx_View_Student_search_GotFocus" TextChanged="tbx_View_Student_search_TextChanged" />
             </WrapPanel>
-                <TextBlock x:Name="Label_student_ID" Text="{Binding student_id}" Grid.Row="1" HorizontalAlignment="Left"/>
+                <TextBlock x:Name="Label_student_ID" Text="{Binding student_id}" Grid.Row="1" HorizontalAlignment="Left" Visibility="Hidden"/>
             <DataGrid 
                       x:Name="DG_Student"
                       Grid.Row="2" 
@@ -119,7 +115,6 @@
                     <DataGridTextColumn Header="Gender"     Width="110"  Binding="{Binding Gender}"/>
                     <DataGridTextColumn Header="Birthday"   Width="110"  Binding="{Binding Birthday}"/>
                     <DataGridTextColumn Header="Phane"      Width="110"  Binding="{Binding Phone}"/>
-                    <!--<DataGridTextColumn Header="course"    Width="110"  Binding="{Binding course.course_Name}"/>-->
                     <DataGridTextColumn Header="Address"    Width="*"    Binding="{Binding Adress}"/>
 
                 </DataGrid.Columns>
@@ -476,7 +471,7 @@
             </Grid>
         </Grid>
         <!--Mang_Course_Grid-->
-        <Grid x:Name="Student_Information" Grid.Row="1" Visibility="Visible" >
+        <Grid x:Name="Student_Information" Grid.Row="1" Visibility="Hidden">
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"/>
                 <RowDefinition/>
@@ -485,29 +480,47 @@
             <Grid Grid.Row="1">
 
                 <TextBlock Name="hidden_st_id" Text="{Binding student_id}" Visibility="Hidden"/>
-
-                <Grid x:Name="Student_Information_"
-               
-                      Visibility="Visible">
+                <Grid x:Name="Student_Information_">           
                     <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="auto"/>
                         <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
+                        <ColumnDefinition />
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                         <RowDefinition/>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
-                    <TextBlock x:Name="STudent_name" Grid.Column="0" Grid.Row="0" Text="{Binding student.FirstName}" FontSize="22" Foreground="Snow"/>
-                    <TextBlock x:Name="STudent_LAstname" Grid.Column="0" Grid.Row="1" Text="{Binding student.LastName}" FontSize="22" Foreground="Snow"/>
-                    <TextBlock x:Name="STudent_Gender" Grid.Column="0" Grid.Row="2" Text="{Binding student.Gender}" FontSize="22" Foreground="Snow"/>
-                    <TextBlock x:Name="STudent_Birthday" Grid.Column="1" Grid.Row="0" Text="{Binding student.Birthday}" FontSize="22" Foreground="Snow"/>
-                    <TextBlock x:Name="STudent_Phone" Grid.Column="1" Grid.Row="1" Text="{Binding student.Phone}" FontSize="22" Foreground="Snow"/>
-                    <TextBlock x:Name="STudent_Adress" Grid.Column="1" Grid.Row="2" Text="{Binding student.Adress}" FontSize="22" Foreground="Snow"/>
-                    <TextBlock x:Name="STudent_Cours" Grid.Column="2" Grid.Row="0" Text="{Binding course.course_Name}" FontSize="22" Foreground="Snow"/>
-                    <TextBlock x:Name="STudent_Coudrs" Grid.Column="2" Grid.Row="1" Text="{Binding course.courseHour}" FontSize="22" Foreground="Snow"/>
-                    <TextBlock x:Name="STudent_Cousrs" Grid.Column="2" Grid.Row="2" Text="{Binding course.Description}" FontSize="22" Foreground="Snow"/>
+
+                    <TextBlock Grid.Column="0" Grid.Row="0" VerticalAlignment="Center"  HorizontalAlignment="Right" Text="FirstName:   " FontSize="22" Foreground="Snow"/>
+                    <TextBlock x:Name="STudent_name" Grid.Column="1" Grid.Row="0" VerticalAlignment="Center"  HorizontalAlignment="Left" Text="{Binding student.FirstName}" FontSize="22" Foreground="Snow"/>
+
+                    <TextBlock  Grid.Column="0" Grid.Row="1" Text="LastName:   " VerticalAlignment="Center"  HorizontalAlignment="Right" FontSize="22" Foreground="Snow"/>
+                    <TextBlock x:Name="STudent_LAstname" Grid.Column="1" Grid.Row="1" Text="{Binding student.LastName}" VerticalAlignment="Center"  HorizontalAlignment="Left" FontSize="22" Foreground="Snow"/>
+
+                    <TextBlock Grid.Column="0" Grid.Row="2" Text="Gender:   " VerticalAlignment="Center"  HorizontalAlignment="Right" FontSize="22" Foreground="Snow"/>
+                    <TextBlock x:Name="STudent_Gender" Grid.Column="1" Grid.Row="2" Text="{Binding student.Gender}" VerticalAlignment="Center"  HorizontalAlignment="Left" FontSize="22" Foreground="Snow"/>
+
+                    <TextBlock Grid.Column="2" Grid.Row="0" Text="Birthday:   " VerticalAlignment="Center"  HorizontalAlignment="Right" FontSize="22" Foreground="Snow"/>
+                    <TextBlock x:Name="STudent_Birthday" Grid.Column="3" Grid.Row="0" Text="{Binding student.Birthday}" VerticalAlignment="Center"  HorizontalAlignment="Left" FontSize="22" Foreground="Snow"/>
+
+                    <TextBlock  Grid.Column="2" Grid.Row="1" Text="Phone:   " VerticalAlignment="Center"  HorizontalAlignment="Right" FontSize="22" Foreground="Snow"/>
+                    <TextBlock x:Name="STudent_Phone" Grid.Column="3" Grid.Row="1" Text="{Binding student.Phone}" VerticalAlignment="Center"  HorizontalAlignment="Left" FontSize="22" Foreground="Snow"/>
+
+                    <TextBlock  Grid.Column="2" Grid.Row="2" Text="Adress:   " VerticalAlignment="Center"  HorizontalAlignment="Right" FontSize="22" Foreground="Snow"/>
+                    <TextBlock x:Name="STudent_Adress" Grid.Column="3" Grid.Row="2" Text="{Binding student.Adress}" VerticalAlignment="Center"  HorizontalAlignment="Left" FontSize="22" Foreground="Snow"/>
+
+                    <TextBlock Grid.Column="4" Grid.Row="0" Text="Course Name:   " VerticalAlignment="Center"  HorizontalAlignment="Right" FontSize="22" Foreground="Snow"/>
+                    <TextBlock x:Name="STudent_Cours" Grid.Column="5" Grid.Row="0" Text="{Binding course.course_Name}" VerticalAlignment="Center"  HorizontalAlignment="Left" FontSize="22" Foreground="Snow"/>
+
+                    <TextBlock Grid.Column="4" Grid.Row="1" Text="course Hour:   " VerticalAlignment="Center"  HorizontalAlignment="Right" FontSize="22" Foreground="Snow"/>
+                    <TextBlock x:Name="STudent_Coudrs" Grid.Column="5" Grid.Row="1" Text="{Binding course.courseHour}" VerticalAlignment="Center"  HorizontalAlignment="Left" FontSize="22" Foreground="Snow"/>
+
+                    <TextBlock Grid.Column="4" Grid.Row="2" Text="Description:   " VerticalAlignment="Center"  HorizontalAlignment="Right" FontSize="22" Foreground="Snow"/>
+                    <TextBlock x:Name="STudent_Cousrs" Grid.Column="5" Grid.Row="2" Text="{Binding course.Description}" VerticalAlignment="Center"  HorizontalAlignment="Left" FontSize="22" Foreground="Snow"/>
 
                 </Grid>
             </Grid>
