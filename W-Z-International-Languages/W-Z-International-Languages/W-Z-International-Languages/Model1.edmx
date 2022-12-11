@@ -32,8 +32,8 @@
           <Property Name="Password" Type="nvarchar" MaxLength="50" />
           <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="Birthday" Type="date" Nullable="false" />
-          <Property Name="Gender" Type="bit" />
+          <Property Name="Birthday" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Gender" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Phone" Type="nvarchar" MaxLength="25" />
           <Property Name="Adress" Type="nvarchar" MaxLength="50" />
         </EntityType>
@@ -109,8 +109,8 @@
           <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Birthday" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="Gender" Type="Boolean" />
+          <Property Name="Birthday" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Gender" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Phone" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
           <Property Name="Adress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="course_student" Relationship="Self.fk_student" FromRole="student" ToRole="course_student" />
@@ -139,7 +139,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="W_Z_International_Languag" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="W_Z_International_LanguagesEntities31" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="course" EntityType="Self.course" />
           <EntitySet Name="course_student" EntityType="Self.course_student" />
           <EntitySet Name="student" EntityType="Self.student" />
@@ -157,7 +157,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="W_Z_International_LanguagesModelStoreContainer" CdmEntityContainer="W_Z_International_Languag">
+        <EntityContainerMapping StorageEntityContainer="W_Z_International_LanguagesModelStoreContainer" CdmEntityContainer="W_Z_International_LanguagesEntities31">
           <EntitySetMapping Name="course">
             <EntityTypeMapping TypeName="W_Z_International_LanguagesModel.course">
               <MappingFragment StoreEntitySet="course">

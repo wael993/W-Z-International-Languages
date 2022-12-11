@@ -22,7 +22,7 @@ namespace W_Z_International_Languages
     public partial class Home : Window
     {
         private ICollectionView CollectionView;
-        W_Z_International_Languag ctx = new W_Z_International_Languag();
+        W_Z_International_LanguagesEntities31 ctx = new W_Z_International_LanguagesEntities31();
 
         public Home()
         {
@@ -242,7 +242,7 @@ namespace W_Z_International_Languages
             TB_New_Address.Text = "";
             TB_New_Phane.Text = "";
             TB_New_Last_Name.Text = "";
-            New_birthday.SelectedDate = null;
+            New_birthday.Text = "";
         }
 
         private void BT_StudentClear_Click(object sender, RoutedEventArgs e)
@@ -313,15 +313,7 @@ namespace W_Z_International_Languages
 
         private void Btn_New_Student_Add_Click(object sender, RoutedEventArgs e)
         {
-            bool gen;
-            if (CB_New_Gender.Text == "Male")
-            {
-                gen = true;
-            }
-            else
-            {
-                gen = false;
-            }
+    
             if (TB_New_First_Name.Text == "" || TB_New_Last_Name.Text == "" || New_birthday.Text == "" ||
                TB_New_Phane.Text == "" || TB_New_Address.Text == "")
             {
@@ -333,18 +325,26 @@ namespace W_Z_International_Languages
                 {
                     FirstName = TB_New_First_Name.Text,
                     LastName = TB_New_Last_Name.Text,
-                    Birthday = New_birthday.DisplayDate,
-                    //Gender = CB_Mang_Gender.Text,
-                    Gender=gen,
+                    Birthday = New_birthday.Text,
+                    Gender = CB_Mang_Gender.Text,
                     Phone = TB_New_Phane.Text,
                     Adress = TB_New_Address.Text,
 
                 };
                 ctx.student.Add(student);
                 ctx.SaveChanges();
+
+                //course_student _course_Student = new course_student();
+
+
+
+
                 var Student = ctx.student.ToList();
                 Student_Registration.DataContext = null;
                 Student_Registration.DataContext = Student;
+
+
+
 
                 TB_New_First_Name.Text = "";
                 TB_New_Last_Name.Text = "";

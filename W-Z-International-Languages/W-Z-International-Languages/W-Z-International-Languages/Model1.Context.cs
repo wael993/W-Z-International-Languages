@@ -13,10 +13,10 @@ namespace W_Z_International_Languages
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class W_Z_International_Languag : DbContext
+    public partial class W_Z_International_LanguagesEntities31 : DbContext
     {
-        public W_Z_International_Languag()
-            : base("name=W_Z_International_Languag")
+        public W_Z_International_LanguagesEntities31()
+            : base("name=W_Z_International_LanguagesEntities31")
         {
         }
     

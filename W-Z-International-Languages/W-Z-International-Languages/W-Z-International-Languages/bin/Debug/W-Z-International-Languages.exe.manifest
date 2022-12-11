@@ -78,14 +78,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="W-Z-International-Languages.exe" size="1593808">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="W-Z-International-Languages.exe" size="1594320">
       <assemblyIdentity name="W-Z-International-Languages" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>bPqt+XP89aH+/W8gD0ewjTQh7W/7vO1kCPfE3OCyvII=</dsig:DigestValue>
+        <dsig:DigestValue>6mNS/4OSVn6+MDb7sc/qm+LrhqhyTVltuvR0eUN3aIw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -107,13 +107,13 @@
       <dsig:DigestValue>CabSpKm6yYNT6twBZzKHKM3v3aBYMgNzK0uSDYpHoWw=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="W-Z-International-Languages.exe.config" size="2617">
+  <file name="W-Z-International-Languages.exe.config" size="3392">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>/fjRpXlMrxV8kEpjejYnYZNZe7wSQg2I2NjRgI7JemI=</dsig:DigestValue>
+      <dsig:DigestValue>vbnOgmK2SaBLRdEB8IgDIW1Cgdxucyi4S0/YWssPA5Q=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

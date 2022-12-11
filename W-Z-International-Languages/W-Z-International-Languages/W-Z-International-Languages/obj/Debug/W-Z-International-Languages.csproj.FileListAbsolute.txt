@@ -49,4 +49,3 @@ F:\Arbeit\projekt\2_Zweit\W-Z-International-Languages\W-Z-International-Language
 F:\Arbeit\projekt\2_Zweit\W-Z-International-Languages\W-Z-International-Languages\W-Z-International-Languages\obj\Debug\W-Z-International-Languages.csproj.CopyComplete
 F:\Arbeit\projekt\2_Zweit\W-Z-International-Languages\W-Z-International-Languages\W-Z-International-Languages\obj\Debug\W-Z-International-Languages.exe
 F:\Arbeit\projekt\2_Zweit\W-Z-International-Languages\W-Z-International-Languages\W-Z-International-Languages\obj\Debug\W-Z-International-Languages.pdb
-F:\Arbeit\projekt\2_Zweit\W-Z-International-Languages\W-Z-International-Languages\W-Z-International-Languages\obj\Debug\W-Z-International-Languages.csprojAssemblyReference.cache
